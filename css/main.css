@@ -136,7 +136,7 @@ button{
 }
 /* Helper Class */
 .padding{
-    padding: 80px 0;
+    padding: 50px 0;
 }
 .no-padding{
     padding: 0;
@@ -227,11 +227,11 @@ button{
     height: 100%;
     width: 100%;
     background: #272c30;
-    top: 0;left: 0
+    top: 0;left: 0;
 }
 
 .site-preloader-wrap .spinner {
-    background-color: #ffd83f;
+    background-color: #2f6a4a; /* green */
     position: absolute;
     left: 50%;
     top: 50%;
@@ -242,7 +242,6 @@ button{
 .spinner {
   width: 40px;
   height: 40px;
-
   border-radius: 100%;  
   -webkit-animation: sk-scaleout 1.0s infinite ease-in-out;
   animation: sk-scaleout 1.0s infinite ease-in-out;
@@ -266,6 +265,7 @@ button{
     opacity: 0;
   }
 }
+
 
 
 /* Button Style */
@@ -1024,7 +1024,7 @@ a,a:hover, .overlay, img, .form-control,  .form-control:hover, button{
    9.0 Counter Section
    ========================================================================== */
 .counter-section{
-	background-image: url(../img/counters-bg.jpg);
+	background-image: url(../img/chld.jpeg);
 	background-repeat: no-repeat;
 	background-attachment: scroll;
 	background-position: center center;
@@ -1257,7 +1257,7 @@ a,a:hover, .overlay, img, .form-control,  .form-control:hover, button{
    15.0 Page Header Section
    ========================================================================== */
 .pager-header{
-    background-image: url(../img/page-header-bg.jpg);
+    background-image: url(../img/sld2.jpg);
 	background-repeat: no-repeat;
 	background-attachment: scroll;
 	background-position: center center;
@@ -1269,7 +1269,7 @@ a,a:hover, .overlay, img, .form-control,  .form-control:hover, button{
 }
 .pager-header h2{
     color: #fff;
-    font-size: 42px;
+    font-size: 25px;
 }
 .pager-header p{
     color: #ddd;
@@ -1942,9 +1942,9 @@ span.date{
 }
 .contact-wrap{
     background-color: #f2f2f2;
-    padding: 80px 50px;
+    padding: 50px 10px;
     box-shadow: 0px 16px 28px 0px rgba(0, 0, 0, 0.15);
-    margin-top: 110px;
+    margin-top: 50px;
     border-radius: 5px;
 }
 .contact-section h3{

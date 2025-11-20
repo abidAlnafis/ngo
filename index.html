@@ -39,7 +39,12 @@
     <!-- Responsive CSS -->
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/logof.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/logof.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/logof.png">
     <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+
 </head>
 
 <body>
@@ -52,29 +57,6 @@
     </div><!-- Preloader -->
 
     <header id="header" class="header-section">
-        <div class="top-header">
-            <div class="container">
-                <div class="top-content-wrap row">
-                    <div class="col-sm-8">
-                        <ul class="left-info">
-                            <li><a href="#"><i class="ti-email"></i><span class="__cf_email__"
-                                        data-cfemail="f7be999198b7ae988285b3989a969e99d994989a">dishabangladesh@yahoo.com</span></a>
-                            </li>
-                            <li><a href="#"><i class="ti-mobile"></i>01711235768</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-sm-4 d-none d-md-block">
-                        <ul class="right-info">
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                            <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
         <div class="bottom-header">
             <div class="container">
                 <div class="bottom-content-wrap row">
@@ -97,6 +79,16 @@
                                 <ul>
                                     <li><a href="gallery.html">Gallery</a></li>
                                     <li><a href="team.html">Volunteers</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Service</a>
+                                <ul>
+                                    <li><a href="microfinance.html">Microfinance</a></li>
+                                    <li><a href="agriculture.html">Agriculture</a></li>
+                                    <li><a href="health.html">Health</a></li>
+                                    <li><a href="education.html">Education</a></li>
+                                    <li><a href="social.html">Social</a></li>
+                                    <li><a href="training.html">Training</a></li>
                                 </ul>
                             </li>
 
@@ -135,7 +127,7 @@
                                 <a href="#" class="default-btn wow cssanimation fadeInBottom" data-wow-delay="0.8s">Join
                                     With Us</a>
                                 <a href="#" class="default-btn wow cssanimation fadeInBottom"
-                                    data-wow-delay="0.8s">Donet Now</a>
+                                    data-wow-delay="0.8s">Donate Now</a>
                             </div>
                         </div>
                     </div>
@@ -190,38 +182,69 @@
     </div>
 
 
-    <section class="promo-section bd-bottom">
-        <div class="promo-wrap">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4 col-sm-6 xs-padding">
-                        <div class="promo-content">
-                            <img src="img/icon-1.png" alt="prmo icon">
-                            <h3>Make Donetion</h3>
-                            <p>Help today because tomorrow you may be the one who needs helping!</p>
-                            <a href="#">Read More</a>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 xs-padding">
-                        <div class="promo-content">
-                            <img src="img/icon-2.png" alt="prmo icon">
-                            <h3>Fundrising</h3>
-                            <p>Help today because tomorrow you may be the one who needs helping! </p>
-                            <a href="#">Read More</a>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 xs-padding">
-                        <div class="promo-content">
-                            <img src="img/icon-3.png" alt="prmo icon">
-                            <h3>Become A Volunteer</h3>
-                            <p>Help today because tomorrow you may be the one who needs helping! </p>
-                            <a href="#">Read More</a>
-                        </div>
+    <section class="disa-services ">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="disa-card">
+                        <i class="fas fa-hand-holding-usd"></i>
+                        <h3>Disa Microfinance</h3>
+                        <p>Providing sustainable financial services to empower low-income families.</p>
+                        <a href="microfinance.html">Read More</a>
                     </div>
                 </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="disa-card">
+                        <i class="fas fa-seedling"></i>
+                        <h3>Disa Agriculture</h3>
+                        <p>Supporting farmers with training, resources, and modern farming techniques.</p>
+                        <a href="agriculture.html">Read More</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="disa-card">
+                        <i class="fas fa-heartbeat"></i>
+                        <h3>Disa Health Programme</h3>
+                        <p>Ensuring quality health services for underprivileged communities.</p>
+                        <a href="health.html">Read More</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="disa-card">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h3>Disa Education & Skill Development</h3>
+                        <p>Improving education standards and vocational skills for youth.</p>
+                        <a href="education.html">Read More</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="disa-card">
+                        <i class="fas fa-users"></i>
+                        <h3>Disa Social Development</h3>
+                        <p>Working towards a society with equality, awareness, and empowerment.</p>
+                        <a href="social.html">Read More</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="disa-card">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                        <h3>DBTC (Disa BD Training Center)</h3>
+                        <p>Professional training and capacity building for better opportunities.</p>
+                        <a href="training.html">Read More</a>
+                    </div>
+                </div>
+
             </div>
         </div>
-    </section><!-- /Promo Section -->
+    </section>
+
+
 
     <section class="causes-section bg-grey bd-bottom padding">
         <div class="container">
@@ -653,75 +676,70 @@
         </div>
     </div><!-- ./Sponsor Section -->
 
-    <section class="widget-section padding">
-        <div class="container">
-            <div class="widget-wrap row">
-                <div class="col-md-4 xs-padding">
-                    <div class="widget-content">
-                        <img class="footimg" src="img/logof.png" alt="logo">
-                        <p>The secret to happiness lies in helping others. Never underestimate the difference YOU can
-                            make in the lives of the poor</p>
-                        <ul class="social-icon">
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
-                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                        </ul>
-                    </div>
+
+    <!-- footer -->
+    <footer class="bg-dark text-white pt-5 pb-4">
+        <div class="container text-md-left">
+            <div class="row">
+
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4 cus-col">
+                    <h5 class="text-uppercase font-weight-bold mb-4">Disa Bangladesh</h5>
+                    <p>Committed to making a difference in our community through education, health, and social
+                        development programs.</p>
                 </div>
-                <div class="col-md-4 xs-padding">
-                    <div class="widget-content">
-                        <h3>Recent Campaigns</h3>
-                        <ul class="widget-link">
-                            <li><a href="#">First charity activity of this summer. <span>-1 Year Ago</span></a></li>
-                            <li><a href="#">Big charity: build school for poor children. <span>-2 Year Ago</span></a>
-                            </li>
-                            <li><a href="#">Clean-water system for rural poor. <span>-2 Year Ago</span></a></li>
-                            <li><a href="#">Nepal earthqueak donation campaigns. <span>-3 Year Ago</span></a></li>
-                        </ul>
-                    </div>
+
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4 cus-col">
+                    <h5 class="text-uppercase font-weight-bold mb-4">Quick Links</h5>
+                    <p><a href="about.html" class="text-white" style="text-decoration:none;">About Us</a></p>
+                    <p><a href="service.html" class="text-white" style="text-decoration:none;">Service</a></p>
+                    <p><a href="contact.html" class="text-white" style="text-decoration:none;">Contact</a></p>
                 </div>
-                <div class="col-md-4 xs-padding">
-                    <div class="widget-content">
-                        <h3>Disa Bangladesh</h3>
-                        <ul class="address">
-                            <li><i class="ti-email"></i> <a
-                                    href="https://html.dynamiclayers.net/cdn-cgi/l/email-protection"
-                                    class="__cf_email__"
-                                    data-cfemail="cd84a3aba28d94a2b8bf89a2a0aca4a3e3aea2a0">[email&#160;protected]</a>
-                            </li>
-                            <li><i class="ti-mobile"></i> +(333) 052 39876</li>
-                            <li><i class="ti-world"></i> Www.YourWebsite.com</li>
-                            <li><i class="ti-location-pin"></i> 60 Grand Avenue. Central New Road 0708, USA</li>
-                        </ul>
-                    </div>
+
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4 cus-col">
+                    <h5 class="text-uppercase font-weight-bold mb-4">Contact</h5>
+                    <p><i class="fas fa-map-marker-alt mr-3"></i>DISA Bhabon, C&B Road, Barisal 8200</p>
+                    <p><i class="fas fa-phone mr-3"></i>+880 1724323500</p>
+                    <p><i class="fas fa-envelope mr-3"></i>disabangladesh@yahoo.com</p>
                 </div>
+
+                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4 cus-col">
+                    <h5 class="text-uppercase font-weight-bold mb-4">Follow Us</h5>
+                    <a href="#" class="text-white mr-4" style="font-size: 1.5rem;"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-white mr-4" style="font-size: 1.5rem;"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-white mr-4" style="font-size: 1.5rem;"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-white mr-4" style="font-size: 1.5rem;"><i
+                            class="fab fa-linkedin-in"></i></a>
+                </div>
+
             </div>
         </div>
-    </section><!-- ./Widget Section -->
 
-    <footer class="footer-section">
+        <hr style="border-top: 1px solid rgb(0, 100, 18); margin: 1.5rem 0;">
+
         <div class="container">
-            <div class="row">
-                <div class="col-md-6 sm-padding">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-md-left text-center mb-3 mb-md-0">
                     <div class="copyright">&copy; <span id="year"></span>, Disa Bangladesh</div>
-
                     <script>
                         document.getElementById('year').textContent = new Date().getFullYear();
                     </script>
-
                 </div>
-                <div class="col-md-6 sm-padding">
-                    <ul class="footer-social">
-                        <li><a href="#">Orders</a></li>
-                        <li><a href="#">Terms</a></li>
-                        <li><a href="#">Report Problem</a></li>
+                <div class="col-md-6 text-md-right text-center">
+                    <ul class="list-inline mb-0">
+                        <li class="list-inline-item"><a href="#" class="text-white"
+                                style="text-decoration:none;">Orders</a></li>
+                        <li class="list-inline-item"><a href="#" class="text-white"
+                                style="text-decoration:none;">Terms</a></li>
+                        <li class="list-inline-item"><a href="#" class="text-white" style="text-decoration:none;">Report
+                                Problem</a></li>
                     </ul>
                 </div>
             </div>
         </div>
-    </footer><!-- /Footer Section -->
+    </footer>
+    <!-- footer end -->
+
+
 
     <a data-scroll href="#header" id="scroll-to-top"><i class="arrow_up"></i></a>
 
