@@ -433,3 +433,62 @@ footer .list-inline-item a {
 .contact-info ul li {
 font-size: 14px;
 }
+
+
+
+
+
+
+.sdg-section {
+  background: #fff;
+  padding: 50px 0;
+}
+
+.sdg-title {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.sdg-title span {
+  color: #2b7a0b;
+}
+
+/* Equal Height SDG Boxes */
+.sdg-box {
+  background: #fff;
+  padding: 15px 6px;
+  border-radius: 12px;
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+  transition: 0.3s;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sdg-box i {
+  font-size: 24px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+/* SDG Colors */
+.sdg1 { background: #e5243b; }
+.sdg2 { background: #dda63a; }
+.sdg3 { background: #4c9f38; }
+.sdg4 { background: #c5192d; }
+.sdg5 { background: #ff3a21; }
+.sdg6 { background: #26bde2; }
+.sdg8 { background: #a21942; }
+.sdg13 { background: #3f7e44; }
+.sdg16 { background: #00689d; }
+.sdg17 { background: #19486a; }
+
+/* Hover Effect */
+.sdg-box:hover {
+  transform: translateY(-5px);
+}

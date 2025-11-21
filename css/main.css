@@ -295,9 +295,10 @@ button{
 /*Section Heading Style*/
 .section-heading .heading-border{
     border-top: 5px solid #2f6a4a;
-    width: 50px;
+    width: 100px;
     display: inline-block;
-    margin-top: 0;
+    margin-top: 10px;
+    margin-bottom: 20px;
     
 } 
 .section-heading h2{
