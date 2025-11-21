@@ -91,7 +91,7 @@
 /* ---- Start of max-width 767px CSS ---- */
 @media all and (max-width: 767px) {
     body, p{
-        font-size: 12px;
+        font-size: 16px;
         line-height: 22px;
     }
     h1{

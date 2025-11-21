@@ -219,13 +219,21 @@
 }
 
 footer p, footer a {
-  font-size: 14px;
+  font-size: 16px;
 }
 
 footer h5 {
+  font-size: 18px;
   color: #bf3640;
 }
 
+.copyright{
+  font-size: 16px;
+}
+
+footer .list-inline-item a {
+  font-size: 14px; /* change size as you want */
+}
 
 
 .curved-frame {
@@ -412,4 +420,16 @@ footer h5 {
   width: 50px;
   border-top: 5px solid #2f6a4a;
   margin: 8px auto 0; /* space above border, center it */
+}
+
+
+
+
+.contact-map{
+  overflow: hidden;
+}
+
+
+.contact-info ul li {
+font-size: 14px;
 }

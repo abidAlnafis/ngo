@@ -99,7 +99,7 @@ ul{
     margin: 0;
 }
 p{
-    font-size: 17px;
+    font-size: 16px;
     margin-bottom: 15px;
 }
 a{  font-family: "Jost",sans-serif;
@@ -1997,32 +1997,7 @@ span.date{
 
 /* ==========================================================================
    21.0 Footer Section
-   ========================================================================== */
-.footer-section{
-    display: block;
-    background-color: #222;
-    border-top: 1px solid #333;
-    padding: 30px 0;
-}
-.footer-section .copyright{
-    font-size: 15px;
-    color: #ddd;
-}  
-.footer-social{
-    display: block;
-    text-align: right;
-}
-.footer-social li{
-    display: inline-block;
-}
-.footer-social li a{
-    color: #ddd;
-    font-size: 15px;
-    margin-left: 20px;
-}
-.footer-social li a:hover{
-    color: #2f6a4a;
-}
+
 
 /* ==========================================================================
    22.0 Scroll To Top
