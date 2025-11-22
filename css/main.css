@@ -422,9 +422,11 @@ a,a:hover, .overlay, img, .form-control,  .form-control:hover, button{
     padding: 30px 0;
     display: inline-block;
     font-size: 16px;
+    text-decoration: none;
 }
 #mainmenu li a:hover{
     color: #2f6a4a;
+    
 }
 /*Dropdown */
 #mainmenu li ul{
@@ -2017,8 +2019,9 @@ span.date{
     bottom: 50px;
     right: 50px;
     z-index: 999;
+    text-decoration: none;
 }
 #scroll-to-top:hover{
-    background-color: #ffb451;
+    background-color: #bf3640;
     color: #fff;
 }
