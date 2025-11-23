@@ -158,29 +158,19 @@
 /*=========================================================================
         Sponsor Carousel
 =========================================================================*/
-    $('#sponsor-carousel').owlCarousel({
-        loop: true,
-        margin: 40,
-        autoplay: true,
-        smartSpeed: 500,
-        nav: false,
-        dots: false,
-        responsive : {
-            0 : {
-                items: 2
-            },
-            480 : {
-                items: 3,
-            },
-            768 : {
-                items: 4
-            },
-            992 : {
-                items: 6
-            }
-        }
-    });
-		
+$('#sponsor-carousel').owlCarousel({
+    loop: true,
+    margin: 10,
+    autoplay: true,
+    autoplayTimeout: 2000,
+    startPosition: 0,   // ⭐ Forces start from first item
+    responsive: {
+        0: { items: 4 },
+        576: { items: 4 },
+        992: { items: 6 }
+    }
+});
+
 /*=========================================================================
         Active venobox
 =========================================================================*/

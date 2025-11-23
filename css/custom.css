@@ -431,7 +431,7 @@ footer .list-inline-item a {
 
 
 .contact-info ul li {
-font-size: 14px;
+font-size: 16px;
 }
 
 
@@ -461,3 +461,29 @@ font-size: 14px;
 
 
 
+.col-s{
+  color: #bf3640;
+}
+
+
+@media (max-width: 768px) {
+  .sponsor-section .sponsor-item img{
+    width: 150%;
+    margin-top: 10px;
+    opacity: 0.8;
+}
+.owl-carousel .owl-stage-outer {
+  margin-left: 0!important;
+}
+}
+
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 3s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
