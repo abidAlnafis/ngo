@@ -276,7 +276,7 @@ button{
 .default-btn{
     background-color: #2f6a4a;
     color: #fff;
-    line-height: 45px;
+    line-height: 40px;
     display: inline-block;
     padding: 0 25px;
     border-radius: 3px;
@@ -840,21 +840,22 @@ a,a:hover, .overlay, img, .form-control,  .form-control:hover, button{
    7.0 Campaigns Section
    ========================================================================== */
 .campaigns-section{
-	background-image: url(../img/featured-bg.jpg);
+	background-image: url(../img/bloodgroup.jpg);
 	background-repeat: no-repeat;
 	background-attachment: scroll;
 	background-position: center center;
 	-webkit-background-size: cover;
 	background-size: cover;
     padding: 150px 0;
+    back
 }
 .campaigns-wrap h4{
-    background-color: rgba(248, 184, 100, 0.8);
+    background-color: #bf3640;
     display: inline-block;
     padding: 10px 15px;
     border-radius: 5px;
     color: #fff;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 500;
     font-family: "Jost", sans-serif;
 }
@@ -919,6 +920,7 @@ a,a:hover, .overlay, img, .form-control,  .form-control:hover, button{
     position: relative;
     border-radius: 5px;
     overflow: hidden;
+    
 }
 .video-wrap img{
     width: 100%;
