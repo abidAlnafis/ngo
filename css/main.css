@@ -813,10 +813,10 @@ a,a:hover, .overlay, img, .form-control,  .form-control:hover, button{
     font-size: 22px;
 }
 .profile-wrap .profile{
-    width: 120px;
-    height: 120px;
+    width: 155px;
+    height: 165px;
     margin-bottom: 20px;
-    border-radius: 50%;
+    border-radius: 10%;
 }
 
 .profile-wrap span{

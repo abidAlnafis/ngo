@@ -500,3 +500,44 @@ font-size: 16px;
     height: 350px;
   }
 }
+
+
+
+
+
+
+.profile-wrap h3 span {
+  color: #2f6a4a;
+  font-size: 14px;
+}
+
+
+
+.disa-services {
+  padding: 35px 0; /* top & bottom space */
+}
+
+
+.disa-services .row > div:nth-child(1) .disa-card {
+  background: #f28b86; /* lighter teal */
+}
+
+.disa-services .row > div:nth-child(2) .disa-card {
+  background: #7de089; /* lighter blue */
+}
+
+.disa-services .row > div:nth-child(3) .disa-card {
+  background: #85b8e7; /* lighter red */
+}
+
+.disa-services .row > div:nth-child(4) .disa-card {
+  background: #b399d6; /* lighter purple */
+}
+
+.disa-services .row > div:nth-child(5) .disa-card {
+  background: #f7c156; /* lighter orange */
+}
+
+.disa-services .row > div:nth-child(6) .disa-card {
+  background: #66d9cc; /* lighter green */
+}
