@@ -541,3 +541,79 @@ font-size: 16px;
 .disa-services .row > div:nth-child(6) .disa-card {
   background: #66d9cc; /* lighter green */
 }
+
+
+
+
+.team-details {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer;
+  max-width: 230px;
+}
+
+.team-details img {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+  transition: 0.3s ease-in-out;
+}
+
+.team-details:hover img {
+  transform: scale(1.05);
+  filter: brightness(70%);
+}
+
+.team-details .hover {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  padding: 12px 0;
+  text-align: center;
+  opacity: 0;
+  transition: 0.3s ease;
+}
+
+.team-details:hover .hover {
+  opacity: 1;
+}
+
+.team-details .hover h3 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.team-details .hover span {
+  display: block;
+  font-size: 13px;
+  opacity: 0.8;
+}
+
+/* Force 2 cards per row on mobile */
+@media (max-width: 576px) {
+  .team-section .col-md-6,
+  .team-section .col-sm-6,
+  .team-section .col-6 {
+    width: 50% !important;      /* 2 per row */
+    padding-left: 10px;
+    padding-right: 10px;
+    max-width:;
+  }
+}
+
+/* Center the small cards */
+.team-section .col-md-6,
+.team-section .col-sm-6,
+.team-section .col-lg-6,
+.team-section .col-6 {
+  display: flex;
+  justify-content: center;
+}
+
+.team-padding{
+  padding: 40px 0px ;
+}
