@@ -617,3 +617,52 @@ font-size: 16px;
 .team-padding{
   padding: 40px 0px ;
 }
+
+
+@media (max-width: 768px) {
+
+  /* 2 cards per row */
+  .disa-services .col-md-6 {
+      flex: 0 0 50%;
+      max-width: 50%;
+  }
+
+  /* equal height columns */
+  .disa-services .row {
+      display: flex;
+      flex-wrap: wrap;
+  }
+
+  /* equal height cards (no icon stretching) */
+  .disa-card {
+      height: 100%;
+      padding: 15px 10px;
+      text-align: center;
+      display: block;         /* NOT flex */
+      margin-top: 0px;
+      margin-bottom: 0px;
+  }
+
+  /* keep icon normal */
+  .disa-card i {
+      font-size: 30px;
+      margin-bottom: 10px;
+      display: inline-block;  /* prevent stretching */
+  }
+
+  /* hide description */
+  .disa-card p {
+      display: none;
+  }
+
+   /* spacing between rows (top + bottom) */
+   .disa-services .col-md-6 {
+    margin-bottom: 30px;   /* adjust as needed */
+}
+}
+
+
+.read-more{
+  color: #bf3640;
+  font-weight: bold;
+}
