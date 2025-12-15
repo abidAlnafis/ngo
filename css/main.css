@@ -490,56 +490,68 @@ a,a:hover, .overlay, img, .form-control,  .form-control:hover, button{
     color: #ffca3f !important;
 }
 
-/*Mobile Menu */
+/* Mobile Menu */
 .slicknav_menu {
     background: none;
     padding: 4px 0;
-    display:none;
+    display: none;
     z-index: 999;
 }
+
 .slicknav_nav {
     background-color: #fff;
 }
+
 .js .slicknav_menu {
     width: 100%;
     position: absolute;
     right: 0;
     top: 0;
 }
-.slicknav_btn{
+
+.slicknav_btn {
     background-color: transparent;
     margin: 13px 5px 14px;
 }
+
 .slicknav_nav .slicknav_row:hover,
-.slicknav_nav .slicknav_row, 
+.slicknav_nav .slicknav_row,
 .slicknav_nav a,
-.slicknav_nav a:hover{
+.slicknav_nav a:hover {
     -moz-border-radius: 0;
     -webkit-border-radius: 0;
     -o-border-radius: 0;
     border-radius: 0;
 }
-.slicknav_nav .slicknav_row, 
+
+.slicknav_nav .slicknav_row,
 .slicknav_nav a {
     padding: 10px 15px;
     margin: 0;
     color: #555;
 }
-.slicknav_nav a .caret{
+
+.slicknav_nav a .caret {
     display: none;
 }
-.slicknav_nav ul{
+
+.slicknav_nav ul {
     margin: 0;
 }
-.slicknav_nav ul li a{
+
+.slicknav_nav ul li a {
     padding-left: 30px;
     font-size: 12px;
 }
+
 .slicknav_nav .slicknav_row:hover,
-.slicknav_nav a:hover{
+.slicknav_nav a:hover {
     background-color: transparent;
-    color: #282828;
+    color: #2f6a4a;
+    text-decoration: none;
 }
+
+
 
 /* ==========================================================================
    3.0 Slider Section
