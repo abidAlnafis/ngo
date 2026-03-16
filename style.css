@@ -1596,7 +1596,7 @@ a.disa-card:hover { text-decoration: none; }
   inset: 50%;
   transform: translate(-50%,-50%);
   width: 10px; height: 10px;
-  background: var(--green-primary);
+  background:rgba(255, 0, 0, 0);
   border-radius: 50%;
   animation: dotPulse 0.9s ease infinite;
 }
