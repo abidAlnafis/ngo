@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Disa Bangladesh's programs — Education, Healthcare, Women Empowerment, Environment, and Livelihood for rural Bangladesh." />
+  <title>Programs | Disa Bangladesh</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+</head>
+
+<body>
+
+  <!-- PAGE LOADER -->
+  <div id="page-loader">
+    <div class="loader-logo">
+      <img src="images/logo.png" alt="Disa Bangladesh" style="width:54px;height:54px;object-fit:contain;" />
+      <div class="loader-logo-text">
+        <div class="loader-logo-name">Disa Bangladesh</div>
+        <div class="loader-logo-tagline">দিশা বাংলাদেশ</div>
+      </div>
+    </div>
+    <div class="loader-spinner">
+      <div class="loader-dot"></div>
+    </div>
+    <div class="loader-bar">
+      <div class="loader-bar-fill"></div>
+    </div>
+    <div class="loader-text">Loading...</div>
+  </div>
+
+  <nav class="navbar" id="navbar">
+    <div class="navbar-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="images/logo.png" alt="Disa Bangladesh Logo" class="logo-icon"
+          style="background:none;box-shadow:none;object-fit:contain;padding:2px;" />
+        <div class="logo-text">
+          <span class="logo-name">Disa Bangladesh</span>
+          <span class="logo-tagline">দিশা বাংলাদেশ</span>
+        </div>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="programs.html" class="active">Programs</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+        <a href="donate.html" class="nav-mobile-donate">❤️ Donate Now</a>
+      </div>
+      <div class="nav-actions">
+        <a href="donate.html" class="nav-donate">❤️ Donate Now</a>
+        <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+      </div>
+    </div>
+  </nav>
+  <button class="mobile-close-btn" onclick="toggleMenu()" aria-label="Close menu">✕</button>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="section-label">What We Do</span>
+      <h1>Our <span>Programs</span></h1>
+      <p>Comprehensive, community-led programs addressing the root causes of poverty and inequality across Bangladesh.
+      </p>
+      <div class="breadcrumb-custom">
+        <a href="index.html">Home</a>
+        <span class="sep">›</span>
+        <span>Programs</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPACT NUMBERS -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item animate-on-scroll">
+          <span class="stat-icon">📚</span>
+          <div class="stat-number">45<span>+</span></div>
+          <div class="stat-title">Learning Centres</div>
+        </div>
+        <div class="stat-item animate-on-scroll">
+          <span class="stat-icon">🏥</span>
+          <div class="stat-number">12<span></span></div>
+          <div class="stat-title">Mobile Health Units</div>
+        </div>
+        <div class="stat-item animate-on-scroll">
+          <span class="stat-icon">👩</span>
+          <div class="stat-number">8K<span>+</span></div>
+          <div class="stat-title">Women Trained</div>
+        </div>
+        <div class="stat-item animate-on-scroll">
+          <span class="stat-icon">🌿</span>
+          <div class="stat-number">23<span></span></div>
+          <div class="stat-title">Districts Covered</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DETAILED PROGRAM SECTIONS -->
+  <section class="section-padding">
+    <div class="container">
+
+      <!-- 1. Microfinance -->
+      <div id="microfinance" class="prog-detail animate-on-scroll">
+        <div class="prog-detail-text">
+          <h2 class="section-title" style="font-size:2rem;">Disa <span>Microfinance</span></h2>
+          <p style="font-size:0.95rem;color:var(--text-muted);line-height:1.8;margin-bottom:20px;">
+            Providing sustainable, low-interest financial services to low-income families across rural Bangladesh. We
+            help families build savings, access credit, and invest in income-generating activities.
+          </p>
+          <ul class="prog-list">
+            <li><span style="color:#C41F33;">✔</span> Collateral-free micro-loans for small entrepreneurs</li>
+            <li><span style="color:#C41F33;">✔</span> Group savings schemes for women</li>
+            <li><span style="color:#C41F33;">✔</span> Financial literacy training and budgeting workshops</li>
+            <li><span style="color:#C41F33;">✔</span> Livelihood asset grants for the ultra-poor</li>
+          </ul>
+          <a href="donate.html" class="btn-red">Support This Program →</a>
+        </div>
+        <div class="prog-detail-img" style="background: linear-gradient(135deg,#EF8080,#c96060);">
+          <img src="images/program1.jpg" alt="Microfinance Program" />
+        </div>
+      </div>
+
+      <!-- 2. Agriculture -->
+      <div id="agriculture" class="prog-detail prog-detail-reverse animate-on-scroll">
+        <div class="prog-detail-text">
+          <h2 class="section-title" style="font-size:2rem;">Disa <span>Agriculture</span></h2>
+          <p style="font-size:0.95rem;color:var(--text-muted);line-height:1.8;margin-bottom:20px;">
+            Supporting farmers with modern farming techniques, quality seeds, and tools. We connect smallholder farmers
+            to markets and help them adopt climate-resilient agricultural practices.
+          </p>
+          <ul class="prog-list">
+            <li><span style="color:var(--green-primary);">✔</span> Modern cultivation training and demonstration farms
+            </li>
+            <li><span style="color:var(--green-primary);">✔</span> Subsidised quality seeds and organic fertilisers</li>
+            <li><span style="color:var(--green-primary);">✔</span> Market linkage and cooperative formation</li>
+            <li><span style="color:var(--green-primary);">✔</span> Climate-smart and flood-resilient farming</li>
+          </ul>
+          <a href="donate.html" class="btn-green">Support This Program →</a>
+        </div>
+        <div class="prog-detail-img" style="background: linear-gradient(135deg,#7DC97D,#4fa84f);">
+          <img src="images/program2.jpg" alt="Agriculture Program" />
+        </div>
+      </div>
+
+      <!-- 3. Health -->
+      <div id="health" class="prog-detail animate-on-scroll">
+        <div class="prog-detail-text">
+          <h2 class="section-title" style="font-size:2rem;">Disa <span>Health Programme</span></h2>
+          <p style="font-size:0.95rem;color:var(--text-muted);line-height:1.8;margin-bottom:20px;">
+            12 mobile medical units bring essential healthcare to remote upazilas monthly — free consultations, maternal
+            care, vaccinations, and nutrition counselling for communities with no hospital access.
+          </p>
+          <ul class="prog-list">
+            <li><span style="color:#1565c0;">✔</span> Free OPD services and medicine distribution</li>
+            <li><span style="color:#1565c0;">✔</span> Maternal and child health programs</li>
+            <li><span style="color:#1565c0;">✔</span> EPI vaccination and nutrition support</li>
+            <li><span style="color:#1565c0;">✔</span> Telemedicine referral network</li>
+          </ul>
+          <a href="donate.html" class="btn-red">Support This Program →</a>
+        </div>
+        <div class="prog-detail-img" style="background: linear-gradient(135deg,#7EB8D4,#4a90b8);">
+          <img src="images/program3.jpg" alt="Health Programme" />
+        </div>
+      </div>
+
+      <!-- 4. Education -->
+      <div id="education" class="prog-detail prog-detail-reverse animate-on-scroll">
+        <div class="prog-detail-text">
+          <h2 class="section-title" style="font-size:2rem;">Disa Education & <span>Skill Development</span></h2>
+          <p style="font-size:0.95rem;color:var(--text-muted);line-height:1.8;margin-bottom:20px;">
+            We operate 45 learning centres providing free education to 15,000+ children annually. We also run vocational
+            training for youth to build in-demand skills for sustainable employment.
+          </p>
+          <ul class="prog-list">
+            <li><span style="color:#6a1b9a;">✔</span> Primary and secondary education in rural areas</li>
+            <li><span style="color:#6a1b9a;">✔</span> Free textbooks, uniforms, and school supplies</li>
+            <li><span style="color:#6a1b9a;">✔</span> Digital literacy and computer training labs</li>
+            <li><span style="color:#6a1b9a;">✔</span> Vocational and skills training for youth</li>
+          </ul>
+          <a href="donate.html" class="btn-green">Support This Program →</a>
+        </div>
+        <div class="prog-detail-img" style="background: linear-gradient(135deg,#A98BD4,#7b59b0);">
+          <img src="images/program1.jpg" alt="Education Program" />
+        </div>
+      </div>
+
+      <!-- 5. Social Development -->
+      <div id="social" class="prog-detail animate-on-scroll">
+        <div class="prog-detail-text">
+          <h2 class="section-title" style="font-size:2rem;">Disa Social <span>Development</span></h2>
+          <p style="font-size:0.95rem;color:var(--text-muted);line-height:1.8;margin-bottom:20px;">
+            Working towards a more just and equitable society through awareness campaigns, community organising, legal
+            aid, and women's empowerment. We address root causes of marginalisation.
+          </p>
+          <ul class="prog-list">
+            <li><span style="color:#e65100;">✔</span> Women's leadership and civic engagement</li>
+            <li><span style="color:#e65100;">✔</span> Legal aid and domestic violence support</li>
+            <li><span style="color:#e65100;">✔</span> Child protection and anti-trafficking programs</li>
+            <li><span style="color:#e65100;">✔</span> Community awareness and sensitisation campaigns</li>
+          </ul>
+          <a href="donate.html" class="btn-red">Support This Program →</a>
+        </div>
+        <div class="prog-detail-img" style="background: linear-gradient(135deg,#E8B84B,#c4922a);">
+          <img src="images/program2.jpg" alt="Social Development" />
+        </div>
+      </div>
+
+      <!-- 6. DBTC -->
+      <div id="dbtc" class="prog-detail prog-detail-reverse animate-on-scroll">
+        <div class="prog-detail-text">
+          <h2 class="section-title" style="font-size:2rem;">DBTC <span>Training Center</span></h2>
+          <p style="font-size:0.95rem;color:var(--text-muted);line-height:1.8;margin-bottom:20px;">
+            Disa BD Training Center offers professional and vocational training programs that equip youth and adults
+            with market-ready skills, improving employment opportunities across Bangladesh.
+          </p>
+          <ul class="prog-list">
+            <li><span style="color:#00695c;">✔</span> Certified vocational and technical courses</li>
+            <li><span style="color:#00695c;">✔</span> IT, graphic design, and digital marketing training</li>
+            <li><span style="color:#00695c;">✔</span> Entrepreneurship and business development</li>
+            <li><span style="color:#00695c;">✔</span> Job placement and career counselling services</li>
+          </ul>
+          <a href="donate.html" class="btn-green">Support This Program →</a>
+        </div>
+        <div class="prog-detail-img" style="background: linear-gradient(135deg,#5EC4B0,#2e9e8a);">
+          <img src="images/program3.jpg" alt="DBTC Training Center" />
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Other Programs Grid -->
+  <div style="text-align:center; margin-top:60px; margin-bottom:16px;">
+    <span class="section-label">More Programs</span>
+  </div>
+  <h2 class="section-title animate-on-scroll" style="text-align:center;">Additional <span>Initiatives</span></h2>
+  <div class="values-grid" style="margin-top:48px;">
+    <div class="value-card animate-on-scroll">
+      <span class="value-icon">🌿</span>
+      <h4>Climate & Environment</h4>
+      <p>Tree planting campaigns, flood resilience training, solar energy access, and sustainable agriculture for
+        climate-vulnerable communities in coastal Bangladesh.</p>
+    </div>
+    <div class="value-card animate-on-scroll">
+      <span class="value-icon">💼</span>
+      <h4>Livelihood Development</h4>
+      <p>Linking rural farmers and artisans to markets through cooperative networks, digital platforms, and
+        agri-business training to increase household incomes sustainably.</p>
+    </div>
+    <div class="value-card animate-on-scroll">
+      <span class="value-icon">🧒</span>
+      <h4>Child Protection</h4>
+      <p>Safe spaces, counselling, and legal aid for vulnerable children. We work with local government to prevent child
+        labor and early marriage across our project areas.</p>
+    </div>
+  </div>
+  </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <h2 class="animate-on-scroll">Help Us <span>Expand Our Reach</span></h2>
+      <p class="animate-on-scroll">Thousands more communities need access to our programs. Your donation helps us reach
+        them.</p>
+      <div class="cta-actions animate-on-scroll">
+        <a href="donate.html" class="btn-red">❤️ Donate Now</a>
+        <a href="contact.html" class="btn-outline-white">Partner With Us →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER (shared template) -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo-name">Disa Bangladesh</div>
+          <div class="logo-tagline">দিশা বাংলাদেশ</div>
+          <p>A registered non-governmental organization working to empower marginalized communities.</p>
+          <div class="footer-social">
+            <a href="#">f</a><a href="#">𝕏</a><a href="#">▶</a><a href="#">📷</a><a href="#">in</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5>Quick Links</h5>
+          <div class="footer-links">
+            <a href="index.html">Home</a><a href="about.html">About Us</a>
+            <a href="programs.html">Programs</a><a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a><a href="donate.html">Donate</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5>Programs</h5>
+          <div class="footer-links">
+            <a href="programs.html">Education</a><a href="programs.html">Healthcare</a>
+            <a href="programs.html">Women Empowerment</a><a href="programs.html">Environment</a>
+            <a href="programs.html">Livelihood</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5>Contact</h5>
+          <div class="footer-contact-item">
+            <div class="icon">📍</div>
+            <div class="info">Dhanmondi, Dhaka 1209</div>
+          </div>
+          <div class="footer-contact-item">
+            <div class="icon">📞</div>
+            <div class="info">+880 2-9876543</div>
+          </div>
+          <div class="footer-contact-item">
+            <div class="icon">✉️</div>
+            <div class="info">info@Disafoundation.org</div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Disa Bangladesh. Reg. No: BD-NGO-2005-0042</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a><a href="#">Terms</a><a href="#">Reports</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    window.addEventListener('load', () => setTimeout(() => document.getElementById('page-loader').classList.add('hidden'), 400));
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 60));
+    function toggleMenu() {
+      document.body.classList.toggle('mobile-menu-open');
+    }
+    document.addEventListener('click', function (e) {
+      if (!document.body.classList.contains('mobile-menu-open')) return;
+      const nav = document.getElementById('navLinks');
+      const hamburger = document.getElementById('hamburger');
+      if (!nav.contains(e.target) && !hamburger.contains(e.target)) {
+        document.body.classList.remove('mobile-menu-open');
+      }
+    });
+    document.querySelectorAll('.nav-links a').forEach(l => l.addEventListener('click', () => { document.body.classList.remove('mobile-menu-open'); }));
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((e, i) => { if (e.isIntersecting) setTimeout(() => e.target.classList.add('visible'), i * 80); });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+  </script>
+</body>
+
+</html>

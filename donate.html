@@ -1,0 +1,401 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Donate to Disa Bangladesh — Support education, healthcare, and women empowerment across Bangladesh." />
+  <title>Donate | Disa Bangladesh</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <style>
+    .payment-tabs { display: flex; gap: 12px; margin-bottom: 20px; }
+    .pay-tab {
+      flex: 1; padding: 14px; border: 2px solid var(--gray-2);
+      border-radius: var(--border-radius); background: var(--white);
+      cursor: pointer; transition: var(--transition);
+      font-size: 0.88rem; font-weight: 600; text-align: center; color: var(--text-muted);
+    }
+    .pay-tab.active {
+      border-color: var(--green-primary); background: var(--green-pale); color: var(--green-primary);
+    }
+    .trust-badges { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 24px; }
+    .trust-badge {
+      display: flex; align-items: center; gap: 6px;
+      background: var(--gray-1); border-radius: 8px; padding: 8px 14px;
+      font-size: 0.78rem; font-weight: 600; color: var(--text-muted);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- PAGE LOADER -->
+  <div id="page-loader">
+    <div class="loader-logo">
+      <img src="images/logo.png" alt="Disa Bangladesh" style="width:54px;height:54px;object-fit:contain;" />
+      <div class="loader-logo-text">
+        <div class="loader-logo-name">Disa Bangladesh</div>
+        <div class="loader-logo-tagline">দিশা বাংলাদেশ</div>
+      </div>
+    </div>
+    <div class="loader-spinner"><div class="loader-dot"></div></div>
+    <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+    <div class="loader-text">Loading...</div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="navbar-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="images/logo.png" alt="Disa Bangladesh Logo" class="logo-icon" style="background:none;box-shadow:none;object-fit:contain;padding:2px;" />
+        <div class="logo-text">
+          <span class="logo-name">Disa Bangladesh</span>
+          <span class="logo-tagline">দিশা বাংলাদেশ</span>
+        </div>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="programs.html">Programs</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+        <a href="donate.html" class="nav-mobile-donate">❤️ Donate Now</a>
+      </div>
+      <div class="nav-actions">
+        <a href="donate.html" class="nav-donate active" style="background:var(--green-primary); border-color:var(--green-primary);">❤️ Donate Now</a>
+        <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+      </div>
+    </div>
+  </nav>
+  <button class="mobile-close-btn" onclick="toggleMenu()" aria-label="Close menu">✕</button>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="section-label" style="background:var(--red-pale);color:var(--red-primary);">Make a Difference</span>
+      <h1>Donate & <span>Change Lives</span></h1>
+      <p>100% of your donation goes directly to our programs. No administrative overhead charges.</p>
+      <div class="breadcrumb-custom">
+        <a href="index.html">Home</a>
+        <span class="sep">›</span>
+        <span>Donate</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- DONATE SECTION -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="donate-grid">
+
+        <!-- Donation Form -->
+        <div class="form-card animate-on-scroll">
+          <span class="section-label" style="margin-bottom:20px; display:inline-flex;">Your Contribution</span>
+          <h3 style="font-size:1.5rem; font-weight:800; margin-bottom:8px; color:var(--dark);">Choose Your Donation</h3>
+          <p style="font-size:0.88rem; color:var(--text-muted); margin-bottom:28px;">Every taka you give is handled with complete transparency and accountability.</p>
+
+          <!-- Frequency -->
+          <label style="font-size:0.85rem;font-weight:600;color:var(--dark);margin-bottom:10px;display:block;">Donation Frequency</label>
+          <div class="frequency-selector">
+            <div class="freq-btn active" onclick="selectFreq(this)">One-Time</div>
+            <div class="freq-btn" onclick="selectFreq(this)">Monthly</div>
+            <div class="freq-btn" onclick="selectFreq(this)">Yearly</div>
+          </div>
+
+          <!-- Amount -->
+          <label style="font-size:0.85rem;font-weight:600;color:var(--dark);margin-bottom:10px;display:block;">Select Amount (BDT)</label>
+          <div class="amount-selector">
+            <div class="amount-btn" onclick="selectAmount(this, 500)">৳500</div>
+            <div class="amount-btn active" onclick="selectAmount(this, 1000)">৳1,000</div>
+            <div class="amount-btn" onclick="selectAmount(this, 2500)">৳2,500</div>
+            <div class="amount-btn" onclick="selectAmount(this, 5000)">৳5,000</div>
+            <div class="amount-btn" onclick="selectAmount(this, 10000)">৳10,000</div>
+            <div class="amount-btn" onclick="selectAmount(this, 0)">Custom</div>
+          </div>
+          <div class="form-group" style="margin-bottom:24px;">
+            <label for="customAmount">Custom Amount (BDT)</label>
+            <input type="number" id="customAmount" name="customAmount" placeholder="Enter your amount" min="100" />
+          </div>
+
+          <!-- Payment Method -->
+          <label style="font-size:0.85rem;font-weight:600;color:var(--dark);margin-bottom:10px;display:block;">Payment Method</label>
+          <div class="payment-tabs">
+            <div class="pay-tab active" onclick="selectPay(this)">💳 Card</div>
+            <div class="pay-tab" onclick="selectPay(this)">📱 bKash</div>
+            <div class="pay-tab" onclick="selectPay(this)">💚 Nagad</div>
+            <div class="pay-tab" onclick="selectPay(this)">🏦 Bank</div>
+          </div>
+
+          <!-- Donor Info -->
+          <div class="form-row">
+            <div class="form-group">
+              <label for="donorFirst">First Name *</label>
+              <input type="text" id="donorFirst" placeholder="Your first name" required />
+            </div>
+            <div class="form-group">
+              <label for="donorLast">Last Name *</label>
+              <input type="text" id="donorLast" placeholder="Your last name" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="donorEmail">Email *</label>
+            <input type="email" id="donorEmail" placeholder="you@example.com" required />
+          </div>
+          <div class="form-group">
+            <label for="donorPhone">Phone Number</label>
+            <input type="tel" id="donorPhone" placeholder="+880 17XX-XXXXXX" />
+          </div>
+          <div class="form-group">
+            <label for="dedication">Dedication Message (Optional)</label>
+            <input type="text" id="dedication" placeholder="In memory of... / In honor of..." />
+          </div>
+
+          <button class="btn-red" style="width:100%; justify-content:center; font-size:1rem; padding:18px;" onclick="handleDonate()">
+            ❤️ Complete Donation — ৳<span id="amountDisplay">1,000</span>
+          </button>
+
+          <div class="trust-badges">
+            <div class="trust-badge">🔒 Secure & Encrypted</div>
+            <div class="trust-badge">✅ Registered NGO</div>
+            <div class="trust-badge">📊 100% Transparent</div>
+            <div class="trust-badge">🧾 Tax Receipt Provided</div>
+          </div>
+
+          <div id="donateSuccess" style="display:none; margin-top:20px; background:var(--green-pale); border:1px solid rgba(0,106,78,0.2); border-radius:var(--border-radius); padding:24px; text-align:center; color:var(--green-primary);">
+            <div style="font-size:2.5rem; margin-bottom:12px;">🎉</div>
+            <strong style="font-size:1.1rem;">Thank you for your generous donation!</strong>
+            <p style="font-size:0.88rem; margin-top:8px; color:var(--text-muted);">A confirmation and tax receipt will be sent to your email. Your support is making real change across Bangladesh.</p>
+          </div>
+        </div>
+
+        <!-- Impact Sidebar -->
+        <div class="animate-on-scroll">
+          <div class="impact-card" style="margin-bottom:24px;">
+            <h4>💡 Your Impact at a Glance</h4>
+            <div class="impact-item">
+              <div class="impact-amount">৳500</div>
+              <div class="impact-desc">Provides textbooks and supplies for one child for an entire school year</div>
+            </div>
+            <div class="impact-item">
+              <div class="impact-amount">৳1,000</div>
+              <div class="impact-desc">Funds a full health check-up and vaccination for a child at our mobile camp</div>
+            </div>
+            <div class="impact-item">
+              <div class="impact-amount">৳2,500</div>
+              <div class="impact-desc">Pays for one week of vocational training for a woman in our empowerment program</div>
+            </div>
+            <div class="impact-item">
+              <div class="impact-amount">৳5,000</div>
+              <div class="impact-desc">Covers a month of school meals for 10 under-nourished students</div>
+            </div>
+            <div class="impact-item">
+              <div class="impact-amount">৳10,000</div>
+              <div class="impact-desc">Funds a complete micro-enterprise starter kit for one woman entrepreneur</div>
+            </div>
+          </div>
+
+          <!-- Transparency Card -->
+          <div style="background:var(--white); border:1px solid var(--gray-2); border-radius:var(--border-radius-lg); padding:28px; margin-bottom:24px; box-shadow:var(--shadow-card);">
+            <h4 style="font-size:1rem; font-weight:800; margin-bottom:16px; color:var(--dark);">📊 Fund Allocation</h4>
+            <div style="margin-bottom:14px;">
+              <div style="display:flex; justify-content:space-between; font-size:0.85rem; font-weight:600; margin-bottom:6px;">
+                <span>Program Delivery</span><span style="color:var(--green-primary);">82%</span>
+              </div>
+              <div style="height:8px; background:var(--gray-2); border-radius:100px; overflow:hidden;">
+                <div style="height:100%; width:82%; background:var(--green-primary); border-radius:100px;"></div>
+              </div>
+            </div>
+            <div style="margin-bottom:14px;">
+              <div style="display:flex; justify-content:space-between; font-size:0.85rem; font-weight:600; margin-bottom:6px;">
+                <span>Field Operations</span><span style="color:var(--green-light);">12%</span>
+              </div>
+              <div style="height:8px; background:var(--gray-2); border-radius:100px; overflow:hidden;">
+                <div style="height:100%; width:12%; background:var(--green-light); border-radius:100px;"></div>
+              </div>
+            </div>
+            <div>
+              <div style="display:flex; justify-content:space-between; font-size:0.85rem; font-weight:600; margin-bottom:6px;">
+                <span>Administration</span><span style="color:var(--gray-3);">6%</span>
+              </div>
+              <div style="height:8px; background:var(--gray-2); border-radius:100px; overflow:hidden;">
+                <div style="height:100%; width:6%; background:var(--gray-3); border-radius:100px;"></div>
+              </div>
+            </div>
+            <p style="font-size:0.78rem; color:var(--text-muted); margin-top:14px; line-height:1.5;">
+              We publish annual audited accounts. <a href="#" style="color:var(--green-primary); font-weight:600;">Download Annual Report →</a>
+            </p>
+          </div>
+
+          <!-- Contact Card -->
+          <div style="background:var(--dark-2); border-radius:var(--border-radius-lg); padding:24px; color:var(--white);">
+            <h4 style="color:var(--white); font-size:0.95rem; margin-bottom:12px;">🏦 Donate via Bank Transfer</h4>
+            <div style="font-size:0.82rem; color:rgba(255,255,255,0.65); line-height:1.8;">
+              <strong style="color:rgba(255,255,255,0.9);">Account Name:</strong> Disa Bangladesh Bangladesh<br>
+              <strong style="color:rgba(255,255,255,0.9);">Bank:</strong> Dutch-Bangla Bank Ltd.<br>
+              <strong style="color:rgba(255,255,255,0.9);">Account No:</strong> 102-110-15872<br>
+              <strong style="color:rgba(255,255,255,0.9);">Routing No:</strong> 090261517<br>
+              <strong style="color:rgba(255,255,255,0.9);">Branch:</strong> Dhanmondi, Dhaka
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Donor Wall -->
+  <section class="section-padding bg-green-pale">
+    <div class="container">
+      <div style="text-align:center; margin-bottom:16px;">
+        <span class="section-label">Our Community</span>
+      </div>
+      <h2 class="section-title animate-on-scroll" style="text-align:center;">Our Generous <span>Donors</span></h2>
+      <p class="section-desc animate-on-scroll" style="margin:0 auto 48px; text-align:center;">We are grateful for every single person who believes in our mission.</p>
+      <div class="testimonial-grid">
+        <div class="testimonial-card animate-on-scroll">
+          <div class="testimonial-stars"><span>★★★★★</span></div>
+          <p>"I've been donating monthly for 3 years. The annual reports are incredibly detailed — you can see exactly where every taka goes. That's rare transparency."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">A</div>
+            <div class="author-info">
+              <div class="name">Ahmed Shafiq</div>
+              <div class="location">Monthly Donor since 2022 · Dhaka</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card animate-on-scroll">
+          <div class="testimonial-stars"><span>★★★★★</span></div>
+          <p>"As a Bangladeshi living abroad, donating to Disa Bangladesh is my way of giving back. Their work in my home district of Sylhet is truly remarkable."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">F</div>
+            <div class="author-info">
+              <div class="name">Farida Islam</div>
+              <div class="location">Donor · London, UK</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card animate-on-scroll">
+          <div class="testimonial-stars"><span>★★★★★</span></div>
+          <p>"Our company runs an annual CSR campaign through Disa Bangladesh. The professionalism, reporting, and on-ground impact are exceptional."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">M</div>
+            <div class="author-info">
+              <div class="name">Md. Rafiqul Islam</div>
+              <div class="location">Corporate Donor · Chittagong</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <h2 class="animate-on-scroll">Every Taka <span>Makes a Difference</span></h2>
+      <p class="animate-on-scroll">Join thousands of donors who are transforming lives across Bangladesh — one donation at a time.</p>
+      <div class="cta-actions animate-on-scroll">
+        <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'})" class="btn-red">❤️ Donate Now</a>
+        <a href="contact.html" class="btn-outline-white">Ask a Question →</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo-name">Disa Bangladesh</div>
+          <div class="logo-tagline">দিশা বাংলাদেশ</div>
+          <p>Empowering marginalized communities across Bangladesh since 2005.</p>
+          <div class="footer-social">
+            <a href="#">f</a><a href="#">𝕏</a><a href="#">▶</a><a href="#">📷</a><a href="#">in</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5>Quick Links</h5>
+          <div class="footer-links">
+            <a href="index.html">Home</a><a href="about.html">About Us</a>
+            <a href="programs.html">Programs</a><a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a><a href="donate.html">Donate</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5>Programs</h5>
+          <div class="footer-links">
+            <a href="programs.html">Education</a><a href="programs.html">Healthcare</a>
+            <a href="programs.html">Women Empowerment</a><a href="programs.html">Environment</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5>Contact</h5>
+          <div class="footer-contact-item">
+            <div class="icon">📍</div><div class="info">Dhanmondi, Dhaka 1209</div>
+          </div>
+          <div class="footer-contact-item">
+            <div class="icon">📞</div><div class="info">+880 2-9876543</div>
+          </div>
+          <div class="footer-contact-item">
+            <div class="icon">✉️</div><div class="info">donate@Disafoundation.org</div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Disa Bangladesh. Reg. No: BD-NGO-2005-0042</p>
+        <div class="footer-bottom-links"><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Annual Reports</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    window.addEventListener('load', () => setTimeout(() => document.getElementById('page-loader').classList.add('hidden'), 400));
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 60));
+    function toggleMenu() {
+      document.body.classList.toggle('mobile-menu-open');
+    }
+    document.addEventListener('click', function(e) {
+      if (!document.body.classList.contains('mobile-menu-open')) return;
+      const nav = document.getElementById('navLinks');
+      const hamburger = document.getElementById('hamburger');
+      if (!nav.contains(e.target) && !hamburger.contains(e.target)) {
+        document.body.classList.remove('mobile-menu-open');
+      }
+    });
+    document.querySelectorAll('.nav-links a').forEach(l => l.addEventListener('click', () => { document.body.classList.remove('mobile-menu-open'); }));
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((e, i) => { if (e.isIntersecting) setTimeout(() => e.target.classList.add('visible'), i * 80); });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+
+    let selectedAmount = 1000;
+
+    function selectAmount(btn, amount) {
+      document.querySelectorAll('.amount-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      selectedAmount = amount || 0;
+      document.getElementById('amountDisplay').textContent = selectedAmount ? selectedAmount.toLocaleString() : '...';
+      if (amount === 0) document.getElementById('customAmount').focus();
+    }
+
+    function selectFreq(btn) {
+      document.querySelectorAll('.freq-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    }
+
+    function selectPay(tab) {
+      document.querySelectorAll('.pay-tab').forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+    }
+
+    document.getElementById('customAmount').addEventListener('input', function() {
+      const val = parseInt(this.value) || 0;
+      document.getElementById('amountDisplay').textContent = val.toLocaleString();
+    });
+
+    function handleDonate() {
+      const success = document.getElementById('donateSuccess');
+      success.style.display = 'block';
+      success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  </script>
+</body>
+</html>

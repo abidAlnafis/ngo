@@ -1,329 +1,253 @@
-<!doctype html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
-<!--[if gt IE 8]><!-->
-<html class="no-js" lang="en"> <!--<![endif]-->
-
+﻿<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-
-    <title>Disa Bangladesh</title>
-
-    <link rel="shortcut icon" type="image/x-icon" href="img/logof.png">
-
-    <!-- Font Awesome Icons CSS -->
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <!-- Themify Icons CSS -->
-    <link rel="stylesheet" href="css/themify-icons.css">
-    <!-- Elegant Font Icons CSS -->
-    <link rel="stylesheet" href="css/elegant-font-icons.css">
-    <!-- Elegant Line Icons CSS -->
-    <link rel="stylesheet" href="css/elegant-line-icons.css">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!-- Venobox CSS -->
-    <link rel="stylesheet" href="css/venobox/venobox.css">
-    <!-- OWL-Carousel CSS -->
-    <link rel="stylesheet" href="css/owl.carousel.css">
-    <!-- Slick Nav CSS -->
-    <link rel="stylesheet" href="css/slicknav.min.css">
-    <!-- Css Animation CSS -->
-    <link rel="stylesheet" href="css/css-animation.min.css">
-    <!-- Nivo Slider CSS -->
-    <link rel="stylesheet" href="css/nivo-slider.css">
-    <!-- Main CSS -->
-    <link rel="stylesheet" href="css/main.css">
-    <!-- Responsive CSS -->
-    <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="css/custom.css">
-    <link rel="stylesheet" href="css/fontawesome.min.css">
-    <!-- Font Awesome CDN link (example) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
-    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Photo gallery of Disa Bangladesh's work and programs across Bangladesh." />
+  <title>Gallery | Disa Bangladesh</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <style>
+    .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .gallery-item.tall img { height: 380px; }
+    .lightbox-overlay {
+      display: none; position: fixed; inset: 0;
+      background: rgba(0,0,0,0.92); z-index: 9999;
+      align-items: center; justify-content: center;
+    }
+    .lightbox-overlay.active { display: flex; }
+    .lightbox-img { max-width: 90vw; max-height: 85vh; border-radius: 12px; box-shadow: 0 30px 80px rgba(0,0,0,0.6); }
+    .lightbox-close {
+      position: absolute; top: 24px; right: 32px;
+      color: var(--white); font-size: 2.5rem; cursor: pointer;
+      width: 48px; height: 48px; border-radius: 50%;
+      background: rgba(255,255,255,0.1);
+      display: flex; align-items: center; justify-content: center;
+      transition: var(--transition);
+    }
+    .lightbox-close:hover { background: var(--red-primary); }
+    .lightbox-caption {
+      position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%);
+      color: rgba(255,255,255,0.8); font-size: 0.9rem;
+      background: rgba(0,0,0,0.5); padding: 10px 24px; border-radius: 100px;
+    }
+  </style>
 </head>
-
 <body>
-    <!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
 
-    <div class="site-preloader-wrap">
-        <div class="spinner"></div>
-    </div><!-- Preloader -->
+  <!-- PAGE LOADER -->
+  <div id="page-loader">
+    <div class="loader-logo">
+      <img src="images/logo.png" alt="Disa Bangladesh" style="width:54px;height:54px;object-fit:contain;" />
+      <div class="loader-logo-text">
+        <div class="loader-logo-name">Disa Bangladesh</div>
+        <div class="loader-logo-tagline">দিশা বাংলাদেশ</div>
+      </div>
+    </div>
+    <div class="loader-spinner"><div class="loader-dot"></div></div>
+    <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+    <div class="loader-text">Loading...</div>
+  </div>
 
-    <header id="header" class="header-section">
-        <div class="top-header">
-            <div class="container">
-                <div class="top-content-wrap row">
-                    <div class="col-sm-8">
-                        <ul class="left-info">
-                            <li><a href="#"><i class="ti-email"></i><span class="__cf_email__"
-                                        data-cfemail="4f062129200f16203a3d0b20222e2621612c2022">[email&#160;protected]</span></a>
-                            </li>
-                            <li><a href="#"><i class="ti-mobile"></i>+(333) 052 39876</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-sm-4 d-none d-md-block">
-                        <ul class="right-info">
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                            <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="navbar-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="images/logo.png" alt="Disa Bangladesh Logo" class="logo-icon" style="background:none;box-shadow:none;object-fit:contain;padding:2px;" />
+        <div class="logo-text">
+          <span class="logo-name">Disa Bangladesh</span>
+          <span class="logo-tagline">দিশা বাংলাদেশ</span>
         </div>
-        <div class="bottom-header">
-            <div class="container">
-                <div class="bottom-content-wrap row">
-                    <div class="col-sm-4">
-                        <div class="site-branding d-flex align-items-center">
-                            <a href="#">
-                                <img src="img/logof.png" alt="Brand">
-                            </a>
-                            <span class="company-name">Disa Bangladesh</span>
-                        </div>
-                    </div>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="programs.html">Programs</a>
+        <a href="gallery.html" class="active">Gallery</a>
+        <a href="contact.html">Contact</a>
+        <a href="donate.html" class="nav-mobile-donate">❤️ Donate Now</a>
+      </div>
+      <div class="nav-actions">
+        <a href="donate.html" class="nav-donate">❤️ Donate Now</a>
+        <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+      </div>
+    </div>
+  </nav>
+  <button class="mobile-close-btn" onclick="toggleMenu()" aria-label="Close menu">✕</button>
 
-                    <div class="col-sm-8 text-right">
-                        <ul id="mainmenu" class="nav navbar-nav nav-menu">
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="about.html">About</a></li>
-                            <li><a href="research.html">Research</a></li>
-                            <li><a href="financialprogram.html">Financial Program</a></li>
-                            <li><a href="#">Event</a>
-                                <ul>
-                                    <li class="active"><a href="gallery.html">Gallery</a></li>
-                                    <li><a href="team.html">Volunteers</a></li>
-                                </ul>
-                            </li>
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="section-label">Our Journey in Pictures</span>
+      <h1>Photo <span>Gallery</span></h1>
+      <p>A visual story of hope, change, and community across Bangladesh.</p>
+      <div class="breadcrumb-custom">
+        <a href="index.html">Home</a>
+        <span class="sep">›</span>
+        <span>Gallery</span>
+      </div>
+    </div>
+  </section>
 
-                            <!-- Contact button now inside the menu -->
-                            <li class="menu-contact-btn">
-                                <a href="contact.html" class="default-btn">Contact Us</a>
-                            </li>
-                        </ul>
+  <!-- GALLERY -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="gallery-filters">
+        <button class="filter-btn active" onclick="filterGallery('all', this)">All Photos</button>
+        <button class="filter-btn" onclick="filterGallery('education', this)">Education</button>
+        <button class="filter-btn" onclick="filterGallery('healthcare', this)">Healthcare</button>
+        <button class="filter-btn" onclick="filterGallery('women', this)">Women</button>
+        <button class="filter-btn" onclick="filterGallery('community', this)">Community</button>
+      </div>
 
-                    </div>
-                </div>
-            </div>
+      <div class="gallery-grid" id="galleryGrid">
+        <div class="gallery-item animate-on-scroll" data-cat="education" onclick="openLightbox(this)">
+          <img src="images/program1.jpg" alt="Education Center — Sylhet" data-caption="Education Center — Sylhet District" />
+          <div class="gallery-overlay"><span>🔍</span></div>
         </div>
-    </header><!-- /Header Section -->
-
-    <div class="header-height"></div>
-
-    <div class="pager-header">
-        <div class="container">
-            <div class="page-content">
-                <h2>Image Gallery</h2>
-                <p>Help today because tomorrow you may be the one who <br>needs more helping!</p>
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="index-2.html">Home</a></li>
-                    <li class="breadcrumb-item active">Gallery</li>
-                </ol>
-            </div>
+        <div class="gallery-item animate-on-scroll" data-cat="healthcare" onclick="openLightbox(this)">
+          <img src="images/program2.jpg" alt="Mobile Health Camp — Barisal" data-caption="Mobile Health Camp — Barisal Division" />
+          <div class="gallery-overlay"><span>🔍</span></div>
         </div>
-    </div><!-- /Page Header -->
-
-    <section class="gallery-section bg-grey bd-bottom padding">
-        <div class="container">
-            <div class="row">
-                <ul class="gallery-filter align-center mb-30">
-                    <li class="active" data-filter="*">All</li>
-                    <li data-filter=".branding">Branding</li>
-                    <li data-filter=".design">Design</li>
-                    <li data-filter=".wordpress">Wordpress</li>
-                    <li data-filter=".marketing">Marketing</li>
-                </ul><!-- /.gallery filter -->
-            </div>
-            <div class="gallery-items row">
-                <div class="col-lg-4 col-sm-6 single-item branding design">
-                    <div class="gallery-wrap">
-                        <img src="img/gallery-1.jpg" alt="gallery">
-                        <div class="hover">
-                            <a class="img-popup" data-gall="galleryimg" href="img/gallery-1.jpg"><i
-                                    class="ti-image"></i></a>
-                        </div>
-                    </div>
-                </div><!-- /Item-1 -->
-                <div class="col-lg-4 col-sm-6 single-item marketing wordpress">
-                    <div class="gallery-wrap">
-                        <img src="img/gallery-2.jpg" alt="gallery">
-                        <div class="hover">
-                            <a class="img-popup" data-gall="galleryimg" href="img/gallery-2.jpg"><i
-                                    class="ti-image"></i></a>
-                        </div>
-                    </div>
-                </div><!-- /Item-2 -->
-                <div class="col-lg-4 col-sm-6 single-item wordpress design branding">
-                    <div class="gallery-wrap">
-                        <img src="img/gallery-3.jpg" alt="gallery">
-                        <div class="hover">
-                            <a class="img-popup" data-gall="galleryimg" href="img/gallery-3.jpg"><i
-                                    class="ti-image"></i></a>
-                        </div>
-                    </div>
-                </div><!-- /Item-3 -->
-                <div class="col-lg-4 col-sm-6 single-item design branding wordpress">
-                    <div class="gallery-wrap">
-                        <img src="img/gallery-4.jpg" alt="gallery">
-                        <div class="hover">
-                            <a class="img-popup" data-gall="galleryimg" href="img/gallery-4.jpg"><i
-                                    class="ti-image"></i></a>
-                        </div>
-                    </div>
-                </div><!-- /Item-4 -->
-                <div class="col-lg-4 col-sm-6 single-item branding marketing">
-                    <div class="gallery-wrap">
-                        <img src="img/gallery-5.jpg" alt="gallery">
-                        <div class="hover">
-                            <a class="img-popup" data-gall="galleryimg" href="img/gallery-5.jpg"><i
-                                    class="ti-image"></i></a>
-                        </div>
-                    </div>
-                </div><!-- /Item-5 -->
-                <div class="col-lg-4 col-sm-6 single-item marketing design">
-                    <div class="gallery-wrap">
-                        <img src="img/gallery-6.jpg" alt="gallery">
-                        <div class="hover">
-                            <a class="img-popup" data-gall="galleryimg" href="img/gallery-6.jpg"><i
-                                    class="ti-image"></i></a>
-                        </div>
-                    </div>
-                </div><!-- /Item-6 -->
-            </div>
+        <div class="gallery-item animate-on-scroll" data-cat="women" onclick="openLightbox(this)">
+          <img src="images/program3.jpg" alt="Women Skills Training — Rajshahi" data-caption="Women Skills Training — Rajshahi" />
+          <div class="gallery-overlay"><span>🔍</span></div>
         </div>
-    </section><!-- /Gallery Section -->
-
-    <div class="sponsor-section bd-bottom">
-        <div class="container">
-            <ul id="sponsor-carousel" class="sponsor-items owl-carousel">
-                <li class="sponsor-item">
-                    <img src="img/sponsor-1.png" alt="sponsor-image">
-                </li>
-                <li class="sponsor-item">
-                    <img src="img/sponsor-2.png" alt="sponsor-image">
-                </li>
-                <li class="sponsor-item">
-                    <img src="img/sponsor-3.png" alt="sponsor-image">
-                </li>
-                <li class="sponsor-item">
-                    <img src="img/sponsor-4.png" alt="sponsor-image">
-                </li>
-                <li class="sponsor-item">
-                    <img src="img/sponsor-5.png" alt="sponsor-image">
-                </li>
-                <li class="sponsor-item">
-                    <img src="img/sponsor-6.png" alt="sponsor-image">
-                </li>
-                <li class="sponsor-item">
-                    <img src="img/sponsor-7.png" alt="sponsor-image">
-                </li>
-                <li class="sponsor-item">
-                    <img src="img/sponsor-8.png" alt="sponsor-image">
-                </li>
-            </ul>
+        <div class="gallery-item animate-on-scroll" data-cat="community" onclick="openLightbox(this)">
+          <img src="images/about-img.jpg" alt="Community Gathering — Manikganj" data-caption="Community Gathering — Manikganj" />
+          <div class="gallery-overlay"><span>🔍</span></div>
         </div>
-    </div><!-- ./Sponsor Section -->
-
-    <!-- footer -->
-    <footer class="bg-dark text-white pt-5 pb-4">
-        <div class="container text-md-left">
-            <div class="row">
-
-                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4 cus-col">
-                    <h5 class="text-uppercase font-weight-bold mb-4">Disa Bangladesh</h5>
-                    <p>Committed to making a difference in our community through education, health, and social
-                        development programs.</p>
-                </div>
-
-                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4 cus-col">
-                    <h5 class="text-uppercase font-weight-bold mb-4">Quick Links</h5>
-                    <p><a href="about.html" class="text-white" style="text-decoration:none;">About Us</a></p>
-                    <p><a href="service.html" class="text-white" style="text-decoration:none;">Service</a></p>
-                    <p><a href="contact.html" class="text-white" style="text-decoration:none;">Contact</a></p>
-                </div>
-
-                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4 cus-col">
-                    <h5 class="text-uppercase font-weight-bold mb-4">Contact</h5>
-                    <p><i class="fas fa-map-marker-alt mr-3"></i>DISA Bhabon, C&B Road, Barisal 8200</p>
-                    <p><i class="fas fa-phone mr-3"></i>+880 1724323500</p>
-                    <p><i class="fas fa-envelope mr-3"></i>disabangladesh@yahoo.com</p>
-                </div>
-
-                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4 cus-col">
-                    <h5 class="text-uppercase font-weight-bold mb-4">Follow Us</h5>
-                    <a href="#" class="text-white mr-4" style="font-size: 1rem;"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="text-white mr-4" style="font-size: 1rem;"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="text-white mr-4" style="font-size: 1rem;"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="text-white mr-4" style="font-size: 1rem;"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-
-            </div>
+        <div class="gallery-item animate-on-scroll" data-cat="education" onclick="openLightbox(this)">
+          <img src="images/program1.jpg" alt="Afternoon Study Session" data-caption="Afternoon Study Session — Comilla" />
+          <div class="gallery-overlay"><span>🔍</span></div>
         </div>
-
-        <hr style="border-top: 1.5px solid rgb(0, 100, 18); margin: 1.5rem 0;">
-
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6 text-md-left text-center mb-3 mb-md-0">
-                    <div class="copyright">&copy; <span id="year"></span>, Disa Bangladesh</div>
-                    <script>
-                        document.getElementById('year').textContent = new Date().getFullYear();
-                    </script>
-                </div>
-                <div class="col-md-6 text-md-right text-center">
-                    <ul class="list-inline mb-0">
-                        <li class="copyright">All rights reserved</li>
-                    </ul>
-                </div>
-            </div>
+        <div class="gallery-item animate-on-scroll" data-cat="women" onclick="openLightbox(this)">
+          <img src="images/program3.jpg" alt="Weaving Workshop" data-caption="Traditional Weaving Workshop — Tangail" />
+          <div class="gallery-overlay"><span>🔍</span></div>
         </div>
-    </footer>
-    <!-- footer end -->
+        <div class="gallery-item animate-on-scroll" data-cat="healthcare" onclick="openLightbox(this)">
+          <img src="images/program2.jpg" alt="Vaccination Drive" data-caption="Vaccination Drive — Khulna" />
+          <div class="gallery-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item animate-on-scroll" data-cat="community" onclick="openLightbox(this)">
+          <img src="images/about-img.jpg" alt="Village Meeting" data-caption="Village Consultation Meeting — Mymensingh" />
+          <div class="gallery-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item animate-on-scroll" data-cat="education" onclick="openLightbox(this)">
+          <img src="images/program1.jpg" alt="Annual Prize Giving" data-caption="Annual Prize Giving — Dhaka" />
+          <div class="gallery-overlay"><span>🔍</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <a data-scroll href="#header" id="scroll-to-top"><i class="arrow_up"></i></a>
+  <!-- Lightbox -->
+  <div class="lightbox-overlay" id="lightbox" onclick="closeLightbox(event)">
+    <div class="lightbox-close" onclick="closeLightboxDirect()">×</div>
+    <img src="" alt="" class="lightbox-img" id="lightboxImg" />
+    <div class="lightbox-caption" id="lightboxCaption"></div>
+  </div>
 
-    <!-- jQuery Lib -->
-    <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-    <script src="js/vendor/jquery-1.12.4.min.js"></script>
-    <!-- Bootstrap JS -->
-    <script src="js/vendor/bootstrap.min.js"></script>
-    <!-- Tether JS -->
-    <script src="js/vendor/tether.min.js"></script>
-    <!-- Imagesloaded JS -->
-    <script src="js/vendor/imagesloaded.pkgd.min.js"></script>
-    <!-- OWL-Carousel JS -->
-    <script src="js/vendor/owl.carousel.min.js"></script>
-    <!-- isotope JS -->
-    <script src="js/vendor/jquery.isotope.v3.0.2.js"></script>
-    <!-- Smooth Scroll JS -->
-    <script src="js/vendor/smooth-scroll.min.js"></script>
-    <!-- venobox JS -->
-    <script src="js/vendor/venobox.min.js"></script>
-    <!-- ajaxchimp JS -->
-    <script src="js/vendor/jquery.ajaxchimp.min.js"></script>
-    <!-- Counterup JS -->
-    <script src="js/vendor/jquery.counterup.min.js"></script>
-    <!-- waypoints js -->
-    <script src="js/vendor/jquery.waypoints.v2.0.3.min.js"></script>
-    <!-- Slick Nav JS -->
-    <script src="js/vendor/jquery.slicknav.min.js"></script>
-    <!-- Nivo Slider JS -->
-    <script src="js/vendor/jquery.nivo.slider.pack.js"></script>
-    <!-- Letter Animation JS -->
-    <script src="js/vendor/letteranimation.min.js"></script>
-    <!-- Wow JS -->
-    <script src="js/vendor/wow.min.js"></script>
-    <!-- Contact JS -->
-    <script src="js/contact.js"></script>
-    <!-- Main JS -->
-    <script src="js/main.js"></script>
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <h2 class="animate-on-scroll">Be Part of Our <span>Next Chapter</span></h2>
+      <p class="animate-on-scroll">Your support writes more stories of hope and transformation like these across Bangladesh.</p>
+      <div class="cta-actions animate-on-scroll">
+        <a href="donate.html" class="btn-red">❤️ Donate Now</a>
+        <a href="contact.html" class="btn-outline-white">Contact Us →</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo-name">Disa Bangladesh</div>
+          <div class="logo-tagline">দিশা বাংলাদেশ</div>
+          <p>Empowering marginalized communities across Bangladesh since 2005.</p>
+          <div class="footer-social">
+            <a href="#">f</a><a href="#">𝕏</a><a href="#">▶</a><a href="#">📷</a><a href="#">in</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5>Quick Links</h5>
+          <div class="footer-links">
+            <a href="index.html">Home</a><a href="about.html">About Us</a>
+            <a href="programs.html">Programs</a><a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a><a href="donate.html">Donate</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5>Programs</h5>
+          <div class="footer-links">
+            <a href="programs.html">Education</a><a href="programs.html">Healthcare</a>
+            <a href="programs.html">Women Empowerment</a><a href="programs.html">Environment</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5>Contact</h5>
+          <div class="footer-contact-item">
+            <div class="icon">📍</div><div class="info">Dhanmondi, Dhaka 1209</div>
+          </div>
+          <div class="footer-contact-item">
+            <div class="icon">✉️</div><div class="info">info@Disafoundation.org</div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Disa Bangladesh. Reg. No: BD-NGO-2005-0042</p>
+        <div class="footer-bottom-links"><a href="#">Privacy</a><a href="#">Terms</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    window.addEventListener('load', () => setTimeout(() => document.getElementById('page-loader').classList.add('hidden'), 400));
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 60));
+    function toggleMenu() {
+      document.body.classList.toggle('mobile-menu-open');
+    }
+    document.addEventListener('click', function(e) {
+      if (!document.body.classList.contains('mobile-menu-open')) return;
+      const nav = document.getElementById('navLinks');
+      const hamburger = document.getElementById('hamburger');
+      if (!nav.contains(e.target) && !hamburger.contains(e.target)) {
+        document.body.classList.remove('mobile-menu-open');
+      }
+    });
+    document.querySelectorAll('.nav-links a').forEach(l => l.addEventListener('click', () => { document.body.classList.remove('mobile-menu-open'); }));
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((e, i) => { if (e.isIntersecting) setTimeout(() => e.target.classList.add('visible'), i * 80); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+
+    function openLightbox(item) {
+      const img = item.querySelector('img');
+      document.getElementById('lightboxImg').src = img.src;
+      document.getElementById('lightboxImg').alt = img.alt;
+      document.getElementById('lightboxCaption').textContent = img.dataset.caption || img.alt;
+      document.getElementById('lightbox').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLightboxDirect() {
+      document.getElementById('lightbox').classList.remove('active');
+      document.body.style.overflow = '';
+    }
+    function closeLightbox(e) {
+      if (e.target === document.getElementById('lightbox')) closeLightboxDirect();
+    }
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightboxDirect(); });
+
+    function filterGallery(cat, btn) {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelectorAll('.gallery-item').forEach(item => {
+        item.style.display = (cat === 'all' || item.dataset.cat === cat) ? '' : 'none';
+      });
+    }
+  </script>
 </body>
-
 </html>
