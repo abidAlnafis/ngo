@@ -9,6 +9,7 @@
   <title>Programs | Disa Bangladesh</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="icon" href="images/logo.png" type="image/png" />
 </head>
 
 <body>
@@ -16,7 +17,7 @@
   <!-- PAGE LOADER -->
   <div id="page-loader">
     <div class="loader-logo">
-      <img src="images/logo.png" alt="Disa Bangladesh" style="width:54px;height:54px;object-fit:contain;" />
+      <img src="images/logo.png" alt="Disa Bangladesh" class="loader-logo-icon" />
       <div class="loader-logo-text">
         <div class="loader-logo-name">Disa Bangladesh</div>
         <div class="loader-logo-tagline">দিশা বাংলাদেশ</div>
@@ -34,10 +35,9 @@
   <nav class="navbar" id="navbar">
     <div class="navbar-inner">
       <a href="index.html" class="nav-logo">
-        <img src="images/logo.png" alt="Disa Bangladesh Logo" class="logo-icon"
-          style="background:none;box-shadow:none;object-fit:contain;padding:2px;" />
-        <div class="logo-text">
-          <span class="logo-name">Disa Bangladesh</span>
+        <img src="images/logo.png" alt="Disa Bangladesh Logo" class="logo-icon" />
+                <div class="logo-text">
+          <span class="logo-name">Disa Bangladesh <span class="beta-badge">Beta</span></span>
           <span class="logo-tagline">দিশা বাংলাদেশ</span>
         </div>
       </a>
@@ -46,11 +46,11 @@
         <a href="about.html">About Us</a>
         <a href="programs.html" class="active">Programs</a>
         <a href="gallery.html">Gallery</a>
-        <a href="contact.html">Contact</a>
-        <a href="donate.html" class="nav-mobile-donate">❤️ Donate Now</a>
+        <a href="research.html">Research</a>
+        <a href="contact.html" class="nav-mobile-donate">✉️ Contact Us</a>
       </div>
       <div class="nav-actions">
-        <a href="donate.html" class="nav-donate">❤️ Donate Now</a>
+        <a href="contact.html" class="nav-donate">✉️ Contact Us</a>
         <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
       </div>
     </div>
@@ -62,7 +62,8 @@
     <div class="container">
       <span class="section-label">What We Do</span>
       <h1>Our <span>Programs</span></h1>
-      <p>Comprehensive, community-led programs addressing the root causes of poverty and inequality across Bangladesh.
+      <p>Comprehensive, community-led programs addressing the root causes of poverty and inequality across Bangladesh.<br>
+        <span class="text-bn" style="display:block; margin-top:8px;">বাংলাদেশের দারিদ্র্য ও বৈষম্যের মূল কারণসমূহ দূর করতে আমাদের রয়েছে সুদূরপ্রসারী ও জনমুখী নানা কর্মসূচি।</span>
       </p>
       <div class="breadcrumb-custom">
         <a href="index.html">Home</a>
@@ -110,7 +111,8 @@
           <h2 class="section-title" style="font-size:2rem;">Disa <span>Microfinance</span></h2>
           <p style="font-size:0.95rem;color:var(--text-muted);line-height:1.8;margin-bottom:20px;">
             Providing sustainable, low-interest financial services to low-income families across rural Bangladesh. We
-            help families build savings, access credit, and invest in income-generating activities.
+            help families build savings, access credit, and invest in income-generating activities.<br>
+            <span class="text-bn" style="display:block; margin-top:8px;">গ্রামবাংলার নিম্ন-আয়ের পরিবারগুলোকে টেকসই এবং স্বল্প সুদে আর্থিক পরিষেবা প্রদান করা হচ্ছে। আমরা পরিবারগুলোকে সঞ্চয় করতে, ঋণ গ্রহণ করতে এবং আয়বর্ধক কাজে বিনিয়োগ করতে সহায়তা করি।</span>
           </p>
           <ul class="prog-list">
             <li><span style="color:#C41F33;">✔</span> Collateral-free micro-loans for small entrepreneurs</li>
@@ -118,7 +120,7 @@
             <li><span style="color:#C41F33;">✔</span> Financial literacy training and budgeting workshops</li>
             <li><span style="color:#C41F33;">✔</span> Livelihood asset grants for the ultra-poor</li>
           </ul>
-          <a href="donate.html" class="btn-red">Support This Program →</a>
+          <a href="contact.html" class="btn-red">Contact Us →</a>
         </div>
         <div class="prog-detail-img" style="background: linear-gradient(135deg,#EF8080,#c96060);">
           <img src="images/program1.jpg" alt="Microfinance Program" />
@@ -131,7 +133,8 @@
           <h2 class="section-title" style="font-size:2rem;">Disa <span>Agriculture</span></h2>
           <p style="font-size:0.95rem;color:var(--text-muted);line-height:1.8;margin-bottom:20px;">
             Supporting farmers with modern farming techniques, quality seeds, and tools. We connect smallholder farmers
-            to markets and help them adopt climate-resilient agricultural practices.
+            to markets and help them adopt climate-resilient agricultural practices.<br>
+            <span class="text-bn" style="display:block; margin-top:8px;">আধুনিক চাষাবাদ পদ্ধতি, উন্নত বীজ ও সরঞ্জাম দিয়ে কৃষকদের সহায়তা করা হচ্ছে। আমরা প্রান্তিক কৃষকদের বাজারের সাথে যুক্ত করি এবং জলবায়ু-সহনশীল কৃষি পদ্ধতি গ্রহণে সহায়তা করি।</span>
           </p>
           <ul class="prog-list">
             <li><span style="color:var(--green-primary);">✔</span> Modern cultivation training and demonstration farms
@@ -140,7 +143,7 @@
             <li><span style="color:var(--green-primary);">✔</span> Market linkage and cooperative formation</li>
             <li><span style="color:var(--green-primary);">✔</span> Climate-smart and flood-resilient farming</li>
           </ul>
-          <a href="donate.html" class="btn-green">Support This Program →</a>
+          <a href="contact.html" class="btn-green">Contact Us →</a>
         </div>
         <div class="prog-detail-img" style="background: linear-gradient(135deg,#7DC97D,#4fa84f);">
           <img src="images/program2.jpg" alt="Agriculture Program" />
@@ -153,7 +156,8 @@
           <h2 class="section-title" style="font-size:2rem;">Disa <span>Health Programme</span></h2>
           <p style="font-size:0.95rem;color:var(--text-muted);line-height:1.8;margin-bottom:20px;">
             12 mobile medical units bring essential healthcare to remote upazilas monthly — free consultations, maternal
-            care, vaccinations, and nutrition counselling for communities with no hospital access.
+            care, vaccinations, and nutrition counselling for communities with no hospital access.<br>
+            <span class="text-bn" style="display:block; margin-top:8px;">হাসপাতাল সুবিধাবঞ্চিত প্রত্যন্ত অঞ্চলে ১২টি ভ্রাম্যমাণ মেডিকেল টিম মাসিক ভিত্তিতে বিনামূল্যে চিকিৎসাসেবা, মাতৃসদন সেবা, টিকাদান এবং পুষ্টি পরামর্শ প্রদান করছে।</span>
           </p>
           <ul class="prog-list">
             <li><span style="color:#1565c0;">✔</span> Free OPD services and medicine distribution</li>
@@ -161,7 +165,7 @@
             <li><span style="color:#1565c0;">✔</span> EPI vaccination and nutrition support</li>
             <li><span style="color:#1565c0;">✔</span> Telemedicine referral network</li>
           </ul>
-          <a href="donate.html" class="btn-red">Support This Program →</a>
+          <a href="contact.html" class="btn-red">Contact Us →</a>
         </div>
         <div class="prog-detail-img" style="background: linear-gradient(135deg,#7EB8D4,#4a90b8);">
           <img src="images/program3.jpg" alt="Health Programme" />
@@ -174,7 +178,8 @@
           <h2 class="section-title" style="font-size:2rem;">Disa Education & <span>Skill Development</span></h2>
           <p style="font-size:0.95rem;color:var(--text-muted);line-height:1.8;margin-bottom:20px;">
             We operate 45 learning centres providing free education to 15,000+ children annually. We also run vocational
-            training for youth to build in-demand skills for sustainable employment.
+            training for youth to build in-demand skills for sustainable employment.<br>
+            <span class="text-bn" style="display:block; margin-top:8px;">আমরা ৪৫টি লার্নিং সেন্টারের মাধ্যমে বছরে ১৫,০০০-এর বেশি শিশুকে বিনামূল্যে শিক্ষা প্রদান করছি। পাশাপাশি যুবসমাজের কর্মসংস্থানের জন্য বৃত্তিমূলক প্রশিক্ষণ পরিচালনা করা হচ্ছে।</span>
           </p>
           <ul class="prog-list">
             <li><span style="color:#6a1b9a;">✔</span> Primary and secondary education in rural areas</li>
@@ -182,7 +187,7 @@
             <li><span style="color:#6a1b9a;">✔</span> Digital literacy and computer training labs</li>
             <li><span style="color:#6a1b9a;">✔</span> Vocational and skills training for youth</li>
           </ul>
-          <a href="donate.html" class="btn-green">Support This Program →</a>
+          <a href="contact.html" class="btn-green">Contact Us →</a>
         </div>
         <div class="prog-detail-img" style="background: linear-gradient(135deg,#A98BD4,#7b59b0);">
           <img src="images/program1.jpg" alt="Education Program" />
@@ -194,8 +199,9 @@
         <div class="prog-detail-text">
           <h2 class="section-title" style="font-size:2rem;">Disa Social <span>Development</span></h2>
           <p style="font-size:0.95rem;color:var(--text-muted);line-height:1.8;margin-bottom:20px;">
-            Working towards a more just and equitable society through awareness campaigns, community organising, legal
-            aid, and women's empowerment. We address root causes of marginalisation.
+            Working towards a society with equality, awareness, and empowerment. We run awareness campaigns on child
+            marriage, dowry, and human rights, and organize community empowerment groups.<br>
+            <span class="text-bn" style="display:block; margin-top:8px;">সমতা, সচেতনতা এবং ক্ষমতায়নভিত্তিক সমাজ গঠনে কাজ করছি। আমরা বাল্যবিবাহ, যৌতুক এবং মানবাধিকার বিষয়ে সচেতনতামূলক প্রচারণা চালাই এবং কমিউনিটি ক্ষমতায়ন গ্রুপ তৈরি করি।</span>
           </p>
           <ul class="prog-list">
             <li><span style="color:#e65100;">✔</span> Women's leadership and civic engagement</li>
@@ -203,7 +209,7 @@
             <li><span style="color:#e65100;">✔</span> Child protection and anti-trafficking programs</li>
             <li><span style="color:#e65100;">✔</span> Community awareness and sensitisation campaigns</li>
           </ul>
-          <a href="donate.html" class="btn-red">Support This Program →</a>
+          <a href="contact.html" class="btn-red">Contact Us →</a>
         </div>
         <div class="prog-detail-img" style="background: linear-gradient(135deg,#E8B84B,#c4922a);">
           <img src="images/program2.jpg" alt="Social Development" />
@@ -216,7 +222,8 @@
           <h2 class="section-title" style="font-size:2rem;">DBTC <span>Training Center</span></h2>
           <p style="font-size:0.95rem;color:var(--text-muted);line-height:1.8;margin-bottom:20px;">
             Disa BD Training Center offers professional and vocational training programs that equip youth and adults
-            with market-ready skills, improving employment opportunities across Bangladesh.
+            with market-ready skills, improving employment opportunities across Bangladesh.<br>
+            <span class="text-bn" style="display:block; margin-top:8px;">দিশা বিডি ট্রেনিং সেন্টার (DBTC) যুবসমাজ ও প্রাপ্তবয়স্কদের বৃত্তিমূলক এবং কারিগরি প্রশিক্ষণ প্রদান করে, যা বৃহত্তর পরিসরে কর্মসংস্থানের সুযোগ সৃষ্টিতে সহায়তা করে।</span>
           </p>
           <ul class="prog-list">
             <li><span style="color:#00695c;">✔</span> Certified vocational and technical courses</li>
@@ -224,7 +231,7 @@
             <li><span style="color:#00695c;">✔</span> Entrepreneurship and business development</li>
             <li><span style="color:#00695c;">✔</span> Job placement and career counselling services</li>
           </ul>
-          <a href="donate.html" class="btn-green">Support This Program →</a>
+          <a href="contact.html" class="btn-green">Contact Us →</a>
         </div>
         <div class="prog-detail-img" style="background: linear-gradient(135deg,#5EC4B0,#2e9e8a);">
           <img src="images/program3.jpg" alt="DBTC Training Center" />
@@ -239,7 +246,7 @@
     <span class="section-label">More Programs</span>
   </div>
   <h2 class="section-title animate-on-scroll" style="text-align:center;">Additional <span>Initiatives</span></h2>
-  <div class="values-grid" style="margin-top:48px;">
+  <div class="values-grid" style="margin-top:48px; margin-bottom:60px;">
     <div class="value-card animate-on-scroll">
       <span class="value-icon">🌿</span>
       <h4>Climate & Environment</h4>
@@ -269,7 +276,7 @@
       <p class="animate-on-scroll">Thousands more communities need access to our programs. Your donation helps us reach
         them.</p>
       <div class="cta-actions animate-on-scroll">
-        <a href="donate.html" class="btn-red">❤️ Donate Now</a>
+        <a href="contact.html" class="btn-red">✉️ Contact Us</a>
         <a href="contact.html" class="btn-outline-white">Partner With Us →</a>
       </div>
     </div>
@@ -292,7 +299,7 @@
           <div class="footer-links">
             <a href="index.html">Home</a><a href="about.html">About Us</a>
             <a href="programs.html">Programs</a><a href="gallery.html">Gallery</a>
-            <a href="contact.html">Contact</a><a href="donate.html">Donate</a>
+            <a href="research.html">Research</a><a href="contact.html">Contact Us</a>
           </div>
         </div>
         <div class="footer-col">
@@ -307,7 +314,7 @@
           <h5>Contact</h5>
           <div class="footer-contact-item">
             <div class="icon">📍</div>
-            <div class="info">Dhanmondi, Dhaka 1209</div>
+            <div class="info">C&B Road, Barishal</div>
           </div>
           <div class="footer-contact-item">
             <div class="icon">📞</div>
@@ -349,6 +356,30 @@
     }, { threshold: 0.12 });
     document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
   </script>
+
+  <!-- Scroll to Top Button -->
+  <button class="scroll-top-btn" id="scrollTopBtn" title="Go to top">↑</button>
+
+  <script>
+    // Scroll to Top functionality
+    const scrollTopBtn = document.getElementById('scrollTopBtn');
+    if (scrollTopBtn) {
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+          scrollTopBtn.classList.add('show');
+        } else {
+          scrollTopBtn.classList.remove('show');
+        }
+      });
+      scrollTopBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
+  </script>
 </body>
 
 </html>
+
+
+
+

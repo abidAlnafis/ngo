@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -7,13 +7,14 @@
   <title>Contact Us | Disa Bangladesh</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="icon" href="images/logo.png" type="image/png" />
 </head>
 <body>
 
   <!-- PAGE LOADER -->
   <div id="page-loader">
     <div class="loader-logo">
-      <img src="images/logo.png" alt="Disa Bangladesh" style="width:54px;height:54px;object-fit:contain;" />
+      <img src="images/logo.png" alt="Disa Bangladesh" class="loader-logo-icon" />
       <div class="loader-logo-text">
         <div class="loader-logo-name">Disa Bangladesh</div>
         <div class="loader-logo-tagline">দিশা বাংলাদেশ</div>
@@ -27,9 +28,9 @@
   <nav class="navbar" id="navbar">
     <div class="navbar-inner">
       <a href="index.html" class="nav-logo">
-        <img src="images/logo.png" alt="Disa Bangladesh Logo" class="logo-icon" style="background:none;box-shadow:none;object-fit:contain;padding:2px;" />
-        <div class="logo-text">
-          <span class="logo-name">Disa Bangladesh</span>
+        <img src="images/logo.png" alt="Disa Bangladesh Logo" class="logo-icon" />
+                <div class="logo-text">
+          <span class="logo-name">Disa Bangladesh <span class="beta-badge">Beta</span></span>
           <span class="logo-tagline">দিশা বাংলাদেশ</span>
         </div>
       </a>
@@ -38,11 +39,11 @@
         <a href="about.html">About Us</a>
         <a href="programs.html">Programs</a>
         <a href="gallery.html">Gallery</a>
-        <a href="contact.html" class="active">Contact</a>
-        <a href="donate.html" class="nav-mobile-donate">❤️ Donate Now</a>
+        <a href="research.html">Research</a>
+        <a href="contact.html" class="nav-mobile-donate">✉️ Contact Us</a>
       </div>
       <div class="nav-actions">
-        <a href="donate.html" class="nav-donate">❤️ Donate Now</a>
+        <a href="contact.html" class="nav-donate active" style="background:var(--green-primary); border-color:var(--green-primary);">✉️ Contact Us</a>
         <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
       </div>
     </div>
@@ -78,7 +79,7 @@
               <div class="icon-box">📍</div>
               <div class="detail-content">
                 <div class="label">Head Office</div>
-                <div class="value">House 42, Road 12, Dhanmondi<br>Dhaka 1209, Bangladesh</div>
+                <div class="value">DISA Bhaban, C&B Road<br>Barishal, Bangladesh</div>
               </div>
             </div>
             <div class="contact-detail-item">
@@ -168,8 +169,8 @@
       <div class="map-placeholder animate-on-scroll">
         <span>📍</span>
         <strong>Disa Bangladesh Head Office</strong>
-        <p style="font-size:0.85rem; color:var(--text-muted);">House 42, Road 12, Dhanmondi, Dhaka 1209, Bangladesh</p>
-        <a href="https://maps.google.com/?q=Dhanmondi+Dhaka+Bangladesh" target="_blank" class="btn-outline-green" style="margin-top:8px; padding:10px 24px; font-size:0.85rem;">Open in Google Maps →</a>
+        <p style="font-size:0.85rem; color:var(--text-muted);">DISA Bhaban, C&B Road, Barishal, Bangladesh</p>
+        <a href="https://maps.google.com/?q=C%26B+Road+Barishal+Bangladesh" target="_blank" class="btn-outline-green" style="margin-top:8px; padding:10px 24px; font-size:0.85rem;">Open in Google Maps →</a>
       </div>
     </div>
   </section>
@@ -180,7 +181,7 @@
       <h2 class="animate-on-scroll">Want to Make a <span>Difference?</span></h2>
       <p class="animate-on-scroll">Even a small donation can change a life forever. Support our programs today.</p>
       <div class="cta-actions animate-on-scroll">
-        <a href="donate.html" class="btn-red">❤️ Donate Now</a>
+        <a href="contact.html" class="btn-red">✉️ Contact Us</a>
         <a href="programs.html" class="btn-outline-white">View Programs →</a>
       </div>
     </div>
@@ -202,7 +203,7 @@
           <div class="footer-links">
             <a href="index.html">Home</a><a href="about.html">About Us</a>
             <a href="programs.html">Programs</a><a href="gallery.html">Gallery</a>
-            <a href="contact.html">Contact</a><a href="donate.html">Donate</a>
+            <a href="contact.html">Contact</a><a href="contact.html">Contact Us</a>
           </div>
         </div>
         <div class="footer-col">
@@ -215,7 +216,7 @@
         <div class="footer-col">
           <h5>Contact</h5>
           <div class="footer-contact-item">
-            <div class="icon">📍</div><div class="info">Dhanmondi, Dhaka 1209</div>
+            <div class="icon">📍</div><div class="info">C&B Road, Barishal</div>
           </div>
           <div class="footer-contact-item">
             <div class="icon">📞</div><div class="info">+880 2-9876543</div>
@@ -258,5 +259,29 @@
       document.getElementById('successMsg').style.display = 'block';
     }
   </script>
+
+  <!-- Scroll to Top Button -->
+  <button class="scroll-top-btn" id="scrollTopBtn" title="Go to top">↑</button>
+
+  <script>
+    // Scroll to Top functionality
+    const scrollTopBtn = document.getElementById('scrollTopBtn');
+    if (scrollTopBtn) {
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+          scrollTopBtn.classList.add('show');
+        } else {
+          scrollTopBtn.classList.remove('show');
+        }
+      });
+      scrollTopBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
+  </script>
 </body>
 </html>
+
+
+
+

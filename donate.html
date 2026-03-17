@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -25,13 +25,14 @@
       font-size: 0.78rem; font-weight: 600; color: var(--text-muted);
     }
   </style>
+  <link rel="icon" href="images/logo.png" type="image/png" />
 </head>
 <body>
 
   <!-- PAGE LOADER -->
   <div id="page-loader">
     <div class="loader-logo">
-      <img src="images/logo.png" alt="Disa Bangladesh" style="width:54px;height:54px;object-fit:contain;" />
+      <img src="images/logo.png" alt="Disa Bangladesh" class="loader-logo-icon" />
       <div class="loader-logo-text">
         <div class="loader-logo-name">Disa Bangladesh</div>
         <div class="loader-logo-tagline">দিশা বাংলাদেশ</div>
@@ -46,9 +47,9 @@
   <nav class="navbar" id="navbar">
     <div class="navbar-inner">
       <a href="index.html" class="nav-logo">
-        <img src="images/logo.png" alt="Disa Bangladesh Logo" class="logo-icon" style="background:none;box-shadow:none;object-fit:contain;padding:2px;" />
-        <div class="logo-text">
-          <span class="logo-name">Disa Bangladesh</span>
+        <img src="images/logo.png" alt="Disa Bangladesh Logo" class="logo-icon" />
+                <div class="logo-text">
+          <span class="logo-name">Disa Bangladesh <span class="beta-badge">Beta</span></span>
           <span class="logo-tagline">দিশা বাংলাদেশ</span>
         </div>
       </a>
@@ -57,8 +58,8 @@
         <a href="about.html">About Us</a>
         <a href="programs.html">Programs</a>
         <a href="gallery.html">Gallery</a>
-        <a href="contact.html">Contact</a>
-        <a href="donate.html" class="nav-mobile-donate">❤️ Donate Now</a>
+        <a href="research.html">Research</a>
+        <a href="contact.html" class="nav-mobile-donate">✉️ Contact Us</a>
       </div>
       <div class="nav-actions">
         <a href="donate.html" class="nav-donate active" style="background:var(--green-primary); border-color:var(--green-primary);">❤️ Donate Now</a>
@@ -233,7 +234,7 @@
               <strong style="color:rgba(255,255,255,0.9);">Bank:</strong> Dutch-Bangla Bank Ltd.<br>
               <strong style="color:rgba(255,255,255,0.9);">Account No:</strong> 102-110-15872<br>
               <strong style="color:rgba(255,255,255,0.9);">Routing No:</strong> 090261517<br>
-              <strong style="color:rgba(255,255,255,0.9);">Branch:</strong> Dhanmondi, Dhaka
+              <strong style="color:rgba(255,255,255,0.9);">Branch:</strong> C&B Road, Barishal
             </div>
           </div>
         </div>
@@ -257,7 +258,7 @@
             <div class="author-avatar">A</div>
             <div class="author-info">
               <div class="name">Ahmed Shafiq</div>
-              <div class="location">Monthly Donor since 2022 · Dhaka</div>
+              <div class="location">Monthly Donor since 2022 · Barishal</div>
             </div>
           </div>
         </div>
@@ -315,7 +316,7 @@
           <div class="footer-links">
             <a href="index.html">Home</a><a href="about.html">About Us</a>
             <a href="programs.html">Programs</a><a href="gallery.html">Gallery</a>
-            <a href="contact.html">Contact</a><a href="donate.html">Donate</a>
+            <a href="research.html">Research</a><a href="contact.html">Contact Us</a>
           </div>
         </div>
         <div class="footer-col">
@@ -328,7 +329,7 @@
         <div class="footer-col">
           <h5>Contact</h5>
           <div class="footer-contact-item">
-            <div class="icon">📍</div><div class="info">Dhanmondi, Dhaka 1209</div>
+            <div class="icon">📍</div><div class="info">C&B Road, Barishal</div>
           </div>
           <div class="footer-contact-item">
             <div class="icon">📞</div><div class="info">+880 2-9876543</div>
@@ -397,5 +398,29 @@
       success.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
   </script>
+
+  <!-- Scroll to Top Button -->
+  <button class="scroll-top-btn" id="scrollTopBtn" title="Go to top">↑</button>
+
+  <script>
+    // Scroll to Top functionality
+    const scrollTopBtn = document.getElementById('scrollTopBtn');
+    if (scrollTopBtn) {
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+          scrollTopBtn.classList.add('show');
+        } else {
+          scrollTopBtn.classList.remove('show');
+        }
+      });
+      scrollTopBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
+  </script>
 </body>
 </html>
+
+
+
+

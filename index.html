@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Disa Bangladesh — A leading NGO dedicated to education, healthcare, and women empowerment in rural communities across Bangladesh." />
+  <meta name="description"
+    content="Disa Bangladesh — A leading NGO dedicated to education, healthcare, and women empowerment in rural communities across Bangladesh." />
   <title>Disa Bangladesh | Empowering Communities</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="icon" href="images/logo.png" type="image/png" />
 </head>
+
 <body>
 
   <!-- PAGE LOADER -->
   <div id="page-loader">
     <div class="loader-logo">
-      <img src="images/logo.png" alt="Disa Bangladesh" style="width:54px;height:54px;object-fit:contain;" />
+      <img src="images/logo.png" alt="Disa Bangladesh" class="loader-logo-icon" />
       <div class="loader-logo-text">
         <div class="loader-logo-name">Disa Bangladesh</div>
         <div class="loader-logo-tagline">দিশা বাংলাদেশ</div>
@@ -23,16 +27,18 @@
     <div class="loader-spinner">
       <div class="loader-dot"></div>
     </div>
-    <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+    <div class="loader-bar">
+      <div class="loader-bar-fill"></div>
+    </div>
     <div class="loader-text">Loading...</div>
   </div>
 
   <nav class="navbar" id="navbar">
     <div class="navbar-inner">
       <a href="index.html" class="nav-logo">
-        <img src="images/logo.png" alt="Disa Bangladesh Logo" class="logo-icon" style="background:none; box-shadow:none; object-fit:contain; padding:2px;" />
+        <img src="images/logo.png" alt="Disa Bangladesh Logo" class="logo-icon" />
         <div class="logo-text">
-          <span class="logo-name">Disa Bangladesh</span>
+          <span class="logo-name">Disa Bangladesh <span class="beta-badge">Beta</span></span>
           <span class="logo-tagline">দিশা বাংলাদেশ</span>
         </div>
       </a>
@@ -41,11 +47,11 @@
         <a href="about.html">About Us</a>
         <a href="programs.html">Programs</a>
         <a href="gallery.html">Gallery</a>
-        <a href="contact.html">Contact</a>
-        <a href="donate.html" class="nav-mobile-donate">❤️ Donate Now</a>
+        <a href="research.html">Research</a>
+        <a href="contact.html" class="nav-mobile-donate">✉️ Contact Us</a>
       </div>
       <div class="nav-actions">
-        <a href="donate.html" class="nav-donate">❤️ Donate Now</a>
+        <a href="contact.html" class="nav-donate">✉️ Contact Us</a>
         <div class="hamburger" id="hamburger" onclick="toggleMenu()">
           <span></span><span></span><span></span>
         </div>
@@ -57,26 +63,25 @@
 
   <!-- ═══════════════════ HERO ═══════════════════ -->
   <section class="hero" id="home">
-    <div class="hero-bg"></div>
+    <div class="hero-slider">
+      <div class="hero-slide hero-slide-1"></div>
+      <div class="hero-slide hero-slide-2"></div>
+      <div class="hero-slide hero-slide-3"></div>
+    </div>
     <div class="hero-overlay"></div>
     <div class="hero-pattern"></div>
 
     <div class="hero-content">
       <div class="hero-text">
         <div class="hero-badge">
-          <span class="dot"></span> Since 2005 · Dhaka, Bangladesh
+          <span class="dot"></span> Since 2005 · Barishal, Bangladesh
         </div>
         <h1 class="hero-title">
-          Building a Better<br>
-          <span class="highlight">Future</span> for Every<br>
-          <span class="highlight-red">Bangladeshi</span>
+          দিশা বাংলাদেশ<br>
         </h1>
-        <p class="hero-desc">
-          We empower marginalized communities across Bangladesh through education, healthcare, women empowerment, and sustainable livelihood programs — creating lasting change, one life at a time.
-        </p>
         <div class="hero-actions">
           <a href="programs.html" class="btn-green">🌿 Our Programs <span>→</span></a>
-          <a href="donate.html" class="btn-outline-white">❤️ Donate Now</a>
+          <a href="about.html" class="btn-outline-white">About US</a>
         </div>
       </div>
 
@@ -147,7 +152,12 @@
 
         <a href="programs.html#microfinance" class="disa-card animate-on-scroll" style="--card-bg:#EF8080;">
           <div class="disa-card-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="rgba(0,0,0,0.55)" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v2m0 8v2m-3-7h6m0 0a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"
+              stroke="rgba(0,0,0,0.55)" stroke-width="1.8">
+              <circle cx="12" cy="12" r="10" />
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M12 6v2m0 8v2m-3-7h6m0 0a2 2 0 11-4 0 2 2 0 014 0z" />
+            </svg>
           </div>
           <h3>Disa Microfinance</h3>
           <p>Providing sustainable financial services to empower low-income families.</p>
@@ -155,9 +165,14 @@
         </a>
 
         <!-- Card 2: Agriculture -->
-        <a href="programs.html#agriculture" class="disa-card animate-on-scroll" style="--card-bg:#7DC97D; text-decoration:none;">
+        <a href="programs.html#agriculture" class="disa-card animate-on-scroll"
+          style="--card-bg:#7DC97D; text-decoration:none;">
           <div class="disa-card-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="rgba(0,0,0,0.55)" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3C7 3 3 8 3 13c0 2.5 1 4.5 2.5 6M12 3c5 0 9 5 9 10 0 2.5-1 4.5-2.5 6M12 3v18"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"
+              stroke="rgba(0,0,0,0.55)" stroke-width="1.8">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M12 3C7 3 3 8 3 13c0 2.5 1 4.5 2.5 6M12 3c5 0 9 5 9 10 0 2.5-1 4.5-2.5 6M12 3v18" />
+            </svg>
           </div>
           <h3>Disa Agriculture</h3>
           <p>Supporting farmers with training, resources, and modern farming techniques.</p>
@@ -165,9 +180,14 @@
         </a>
 
         <!-- Card 3: Health -->
-        <a href="programs.html#health" class="disa-card animate-on-scroll" style="--card-bg:#7EB8D4; text-decoration:none;">
+        <a href="programs.html#health" class="disa-card animate-on-scroll"
+          style="--card-bg:#7EB8D4; text-decoration:none;">
           <div class="disa-card-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="rgba(0,0,0,0.55)" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.636l1.318-1.318a4.5 4.5 0 116.364 6.364L12 20.364l-7.682-7.682a4.5 4.5 0 010-6.364z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"
+              stroke="rgba(0,0,0,0.55)" stroke-width="1.8">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.636l1.318-1.318a4.5 4.5 0 116.364 6.364L12 20.364l-7.682-7.682a4.5 4.5 0 010-6.364z" />
+            </svg>
           </div>
           <h3>Disa Health Programme</h3>
           <p>Ensuring quality health services for underprivileged communities.</p>
@@ -175,9 +195,15 @@
         </a>
 
         <!-- Card 4: Education -->
-        <a href="programs.html#education" class="disa-card animate-on-scroll" style="--card-bg:#A98BD4; text-decoration:none;">
+        <a href="programs.html#education" class="disa-card animate-on-scroll"
+          style="--card-bg:#A98BD4; text-decoration:none;">
           <div class="disa-card-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="rgba(0,0,0,0.55)" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M12 14l9-5-9-5-9 5 9 5z"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 14l6.16-3.422A12.083 12.083 0 0121 17.25c0 3.312-4.03 6-9 6s-9-2.688-9-6c0-1.18.432-2.285 1.16-3.25L12 14z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"
+              stroke="rgba(0,0,0,0.55)" stroke-width="1.8">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 14l9-5-9-5-9 5 9 5z" />
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M12 14l6.16-3.422A12.083 12.083 0 0121 17.25c0 3.312-4.03 6-9 6s-9-2.688-9-6c0-1.18.432-2.285 1.16-3.25L12 14z" />
+            </svg>
           </div>
           <h3>Disa Education & Skill Development</h3>
           <p>Improving education standards and vocational skills for youth.</p>
@@ -185,9 +211,14 @@
         </a>
 
         <!-- Card 5: Social Development -->
-        <a href="programs.html#social" class="disa-card animate-on-scroll" style="--card-bg:#E8B84B; text-decoration:none;">
+        <a href="programs.html#social" class="disa-card animate-on-scroll"
+          style="--card-bg:#E8B84B; text-decoration:none;">
           <div class="disa-card-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="rgba(0,0,0,0.55)" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a4 4 0 00-5-3.87M9 20H4v-2a4 4 0 015-3.87m8-4a4 4 0 11-8 0 4 4 0 018 0zM3 8c0-1.66 1.34-3 3-3s3 1.34 3 3"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"
+              stroke="rgba(0,0,0,0.55)" stroke-width="1.8">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M17 20h5v-2a4 4 0 00-5-3.87M9 20H4v-2a4 4 0 015-3.87m8-4a4 4 0 11-8 0 4 4 0 018 0zM3 8c0-1.66 1.34-3 3-3s3 1.34 3 3" />
+            </svg>
           </div>
           <h3>Disa Social Development</h3>
           <p>Working towards a society with equality, awareness, and empowerment.</p>
@@ -195,9 +226,14 @@
         </a>
 
         <!-- Card 6: Training Center -->
-        <a href="programs.html#dbtc" class="disa-card animate-on-scroll" style="--card-bg:#5EC4B0; text-decoration:none;">
+        <a href="programs.html#dbtc" class="disa-card animate-on-scroll"
+          style="--card-bg:#5EC4B0; text-decoration:none;">
           <div class="disa-card-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="rgba(0,0,0,0.55)" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><path stroke-linecap="round" stroke-linejoin="round" d="M8 21h8m-4-4v4"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"
+              stroke="rgba(0,0,0,0.55)" stroke-width="1.8">
+              <rect x="2" y="3" width="20" height="14" rx="2" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8 21h8m-4-4v4" />
+            </svg>
           </div>
           <h3>DBTC (Disa BD Training Center)</h3>
           <p>Professional training and capacity building for better opportunities.</p>
@@ -231,7 +267,8 @@
           <div class="program-card-body">
             <div class="program-card-icon">📚</div>
             <h3>Quality Education</h3>
-            <p>We operate 45 learning centres across rural Bangladesh, providing free quality education, books, and scholarships to children from underprivileged families.</p>
+            <p>We operate 45 learning centres across rural Bangladesh, providing free quality education, books, and
+              scholarships to children from underprivileged families.</p>
             <a href="programs.html" class="program-card-link">Learn More →</a>
           </div>
         </div>
@@ -244,7 +281,8 @@
           <div class="program-card-body">
             <div class="program-card-icon">🏥</div>
             <h3>Rural Healthcare</h3>
-            <p>Our mobile medical units and health camps bring essential healthcare services — including maternal care, vaccinations, and nutrition — to the doorstep of remote communities.</p>
+            <p>Our mobile medical units and health camps bring essential healthcare services — including maternal care,
+              vaccinations, and nutrition — to the doorstep of remote communities.</p>
             <a href="programs.html" class="program-card-link">Learn More →</a>
           </div>
         </div>
@@ -257,7 +295,8 @@
           <div class="program-card-body">
             <div class="program-card-icon">👩‍🌾</div>
             <h3>Women Empowerment</h3>
-            <p>Through vocational training, micro-financing, and skills development, we help women build economic independence and become leaders in their communities.</p>
+            <p>Through vocational training, micro-financing, and skills development, we help women build economic
+              independence and become leaders in their communities.</p>
             <a href="programs.html" class="program-card-link">Learn More →</a>
           </div>
         </div>
@@ -285,10 +324,20 @@
           <span class="section-label">Our Story</span>
           <h2 class="section-title">Rooted in <span>Bangladesh</span>,<br>Driven by Compassion</h2>
           <p class="section-desc" style="margin-bottom: 24px;">
-            Founded in 2005 in Dhaka, Disa Bangladesh started with a simple belief: every child deserves education, every family deserves healthcare, and every woman deserves dignity. Our grassroots approach ensures that aid reaches those who need it most.
+            Founded in 2005 in Barishal, Disa Bangladesh started with a simple belief: every child deserves education,
+            every family deserves healthcare, and every woman deserves dignity. Our grassroots approach ensures that aid
+            reaches those who need it most.
           </p>
+          <p class="text-bn" style="color:var(--text-muted); margin-bottom: 24px;">২০০৫ সালে বরিশালে প্রতিষ্ঠিত দিশা
+            বাংলাদেশ বিশ্বাস করে— প্রতিটি শিশুর শিক্ষার অধিকার আছে, প্রতিটি পরিবারের স্বাস্থ্যসেবা পাওয়ার অধিকার আছে
+            এবং প্রতিটি নারীর মর্যাদার অধিকার আছে।</p>
           <p style="font-size:0.95rem; color: var(--text-muted); line-height:1.8; margin-bottom: 32px;">
-            Over two decades, we have expanded from a single district to 23 districts across Bangladesh, touching over 50,000 lives directly. We work hand in hand with local communities, government bodies, and international partners to drive sustainable, long-term change.
+            Over two decades, we have expanded from a single district to 23 districts across Bangladesh, touching over
+            50,000 lives directly. We work hand in hand with local communities, government bodies, and international
+            partners to drive sustainable, long-term change.<br>
+            <span class="text-bn" style="display:block; margin-top:8px;">গত দুই দশকে আমরা একটি জেলা থেকে শুরু করে
+              বাংলাদেশের ২৩টি জেলায় আমাদের কার্যক্রম প্রসারিত করেছি, যার মাধ্যমে সরাসরি ৫০,০০০ এরও বেশি মানুষের
+              জীবন-মান উন্নত হয়েছে।</span>
           </p>
           <div style="display:flex; gap:16px; flex-wrap:wrap;">
             <a href="about.html" class="btn-green">Our Story →</a>
@@ -312,32 +361,38 @@
         <div class="value-card animate-on-scroll">
           <span class="value-icon">🤝</span>
           <h4>Community First</h4>
-          <p>Every decision we make centers on the needs, voices, and dignity of the communities we serve across Bangladesh.</p>
+          <p>Every decision we make centers on the needs, voices, and dignity of the communities we serve across
+            Bangladesh.</p>
         </div>
         <div class="value-card animate-on-scroll">
           <span class="value-icon">💚</span>
           <h4>Transparency</h4>
-          <p>We maintain complete financial transparency. Every taka donated is accounted for and reported publicly to our stakeholders.</p>
+          <p>We maintain complete financial transparency. Every taka donated is accounted for and reported publicly to
+            our stakeholders.</p>
         </div>
         <div class="value-card animate-on-scroll">
           <span class="value-icon">🌱</span>
           <h4>Sustainability</h4>
-          <p>We design programs that empower communities to sustain progress independently, long after our projects conclude.</p>
+          <p>We design programs that empower communities to sustain progress independently, long after our projects
+            conclude.</p>
         </div>
         <div class="value-card animate-on-scroll">
           <span class="value-icon">⚖️</span>
           <h4>Equity & Inclusion</h4>
-          <p>We prioritize the most marginalized, ensuring women, children, and minorities receive equitable access to our services.</p>
+          <p>We prioritize the most marginalized, ensuring women, children, and minorities receive equitable access to
+            our services.</p>
         </div>
         <div class="value-card animate-on-scroll">
           <span class="value-icon">🔬</span>
           <h4>Evidence-Based</h4>
-          <p>Our programs are designed and continuously improved based on rigorous data collection, research, and measurable impact.</p>
+          <p>Our programs are designed and continuously improved based on rigorous data collection, research, and
+            measurable impact.</p>
         </div>
         <div class="value-card animate-on-scroll">
           <span class="value-icon">🌍</span>
           <h4>Partnerships</h4>
-          <p>We collaborate with government agencies, UN bodies, and local organizations to maximize reach and effectiveness.</p>
+          <p>We collaborate with government agencies, UN bodies, and local organizations to maximize reach and
+            effectiveness.</p>
         </div>
       </div>
     </div>
@@ -347,50 +402,116 @@
   <section class="section-padding bg-green-pale">
     <div class="container">
       <div style="text-align:center; margin-bottom:16px;">
-        <span class="section-label">Community Voices</span>
-      </div>
-      <div style="text-align:center;">
-        <h2 class="section-title animate-on-scroll">Stories of <span>Change</span></h2>
-      </div>
-      <div class="testimonial-grid">
-        <div class="testimonial-card animate-on-scroll">
-          <div class="testimonial-stars">
-            <span>★★★★★</span>
+        <div style="text-align:center; margin-bottom:16px;">
+          <span class="section-label">প্রান্তিক মানুষের কথা</span>
+        </div>
+        <div style="text-align:center;">
+          <h2 class="section-title animate-on-scroll text-bn">পরিবর্তনের <span>গল্প</span></h2>
+        </div>
+        <div class="testimonial-grid">
+          <div class="testimonial-card animate-on-scroll">
+            <div class="testimonial-stars">
+              <span>★★★★★</span>
+            </div>
+            <p class="text-bn" style="color:var(--text-muted);">"দিশা বাংলাদেশ আমাদের গ্রামে একটি স্কুল বানিয়েছে। আমার
+              মেয়ে এখন অষ্টম শ্রেণীতে পড়ে— আমাদের বংশের প্রথম মেয়ে যে স্কুলে যাচ্ছে। আমি কখনো ভাবিনি এমনটা সম্ভব
+              হবে।"</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">R</div>
+              <div class="author-info">
+                <div class="name text-bn" style="font-weight:600; line-height:1.2;">রহিম উদ্দিন</div>
+                <div class="location text-bn" style="font-size:0.8rem;">সিলেট জেলা, সুবিধাভোগীর পিতা</div>
+              </div>
+            </div>
           </div>
-          <p>"Disa Bangladesh built a school in our village. My daughter is now in Class 8 — the first girl in our family to ever go to school. I never thought this was possible."</p>
-          <div class="testimonial-author">
-            <div class="author-avatar">R</div>
-            <div class="author-info">
-              <div class="name">Rahim Uddin</div>
-              <div class="location">Sylhet District, Father of Beneficiary</div>
+          <div class="testimonial-card animate-on-scroll">
+            <div class="testimonial-stars">
+              <span>★★★★★</span>
+            </div>
+            <p class="text-bn" style="color:var(--text-muted);">"ভ্রাম্যমাণ মেডিকেল ক্যাম্প প্রতি ২ মাস অন্তর আমাদের চরে
+              আসে। তারা টিকা ও পুষ্টির প্যাকেট দিয়ে আমার শিশুর জীবন বাঁচিয়েছিল। এই সেবাগুলোর অস্তিত্ব আমাদের জানাই ছিল
+              না।"</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">S</div>
+              <div class="author-info">
+                <div class="name text-bn" style="font-weight:600; line-height:1.2;">সালমা বেগম</div>
+                <div class="location text-bn" style="font-size:0.8rem;">বরিশাল জেলা, একজন মা</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card animate-on-scroll">
+            <div class="testimonial-stars">
+              <span>★★★★★</span>
+            </div>
+            <p class="text-bn" style="color:var(--text-muted);">"আমি নারীদের প্রশিক্ষণ কর্মসূচির মাধ্যমে সেলাই শিখেছি
+              এবং নিজের ব্যবসা শুরু করেছি। এখন আমি আমার দুই ছেলেকে স্কুলে পাঠানোর মতো যথেষ্ট উপার্জন করি। দিশা আমার জীবন
+              সম্পূর্ণ বদলে দিয়েছে।"</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">N</div>
+              <div class="author-info">
+                <div class="name text-bn" style="font-weight:600; line-height:1.2;">নাসরিন আক্তার</div>
+                <div class="location text-bn" style="font-size:0.8rem;">রাজশাহী, প্রশিক্ষণ গ্রহণকারী নারী</div>
+              </div>
             </div>
           </div>
         </div>
-        <div class="testimonial-card animate-on-scroll">
-          <div class="testimonial-stars">
-            <span>★★★★★</span>
-          </div>
-          <p>"The mobile health camp came to our chara every 2 months. They saved my baby's life with vaccinations and nutrition packs. We had no idea these services existed."</p>
-          <div class="testimonial-author">
-            <div class="author-avatar">S</div>
-            <div class="author-info">
-              <div class="name">Salma Begum</div>
-              <div class="location">Barisal District, Mother</div>
-            </div>
-          </div>
+      </div>
+  </section>
+
+  <!-- ═══════════════════ UN SDG SECTION ═══════════════════ -->
+  <section class="sdg-section section-padding">
+    <div class="container">
+      <div class="sdg-heading">
+        <div style="text-align:center; margin-bottom:16px;">
+          <span class="section-label">Our Contribution</span>
         </div>
-        <div class="testimonial-card animate-on-scroll">
-          <div class="testimonial-stars">
-            <span>★★★★★</span>
-          </div>
-          <p>"I learned tailoring and started my own business through the women's training program. Now I earn enough to send my two sons to school. Disa changed my life completely."</p>
-          <div class="testimonial-author">
-            <div class="author-avatar">N</div>
-            <div class="author-info">
-              <div class="name">Nasreen Akter</div>
-              <div class="location">Rajshahi, Women's Program Graduate</div>
-            </div>
-          </div>
+        <h2 class="section-title animate-on-scroll" style="text-align:center; margin-bottom:28px;">
+          Our Contribution to <span>UN's</span>
+        </h2>
+        <div class="sdg-logo-wrap">
+          <img src="images/unlogop.png" alt="UN Sustainable Development Goals" class="sdg-logo-img" />
+        </div>
+      </div>
+      <div class="sdg-grid">
+        <div class="sdg-item animate-on-scroll">
+          <img src="images/poverty.jpg" alt="No Poverty" />
+          <span>No Poverty</span>
+        </div>
+        <div class="sdg-item animate-on-scroll">
+          <img src="images/hunger.jpg" alt="Zero Hunger" />
+          <span>Zero Hunger</span>
+        </div>
+        <div class="sdg-item animate-on-scroll">
+          <img src="images/health.jpg" alt="Good Health and Well-Being" />
+          <span>Good Health</span>
+        </div>
+        <div class="sdg-item animate-on-scroll">
+          <img src="images/education (2).jpg" alt="Quality Education" />
+          <span>Quality Education</span>
+        </div>
+        <div class="sdg-item animate-on-scroll">
+          <img src="images/gender.jpg" alt="Gender Equality" />
+          <span>Gender Equality</span>
+        </div>
+        <div class="sdg-item animate-on-scroll">
+          <img src="images/water.jpg" alt="Clean Water and Sanitation" />
+          <span>Clean Water</span>
+        </div>
+        <div class="sdg-item animate-on-scroll">
+          <img src="images/economic.jpg" alt="Decent Work and Economic Growth" />
+          <span>Economic Growth</span>
+        </div>
+        <div class="sdg-item animate-on-scroll">
+          <img src="images/climate.jpg" alt="Climate Action" />
+          <span>Climate Action</span>
+        </div>
+        <div class="sdg-item animate-on-scroll">
+          <img src="images/peace.jpg" alt="Peace, Justice and Strong Institutions" />
+          <span>Peace &amp; Justice</span>
+        </div>
+        <div class="sdg-item animate-on-scroll">
+          <img src="images/partnership.jpg" alt="Partnerships for the Goals" />
+          <span>Partnerships</span>
         </div>
       </div>
     </div>
@@ -400,9 +521,13 @@
   <section class="cta-section">
     <div class="container">
       <h2 class="animate-on-scroll">Your Support Can <span>Transform Lives</span></h2>
-      <p class="animate-on-scroll">Every donation — big or small — goes directly to funding education, healthcare, and empowerment programs for communities across Bangladesh.</p>
+      <p class="animate-on-scroll">Every donation — big or small — goes directly to funding education, healthcare, and
+        empowerment programs for communities across Bangladesh.<br>
+        <span class="text-bn" style="display:block; margin-top:10px; opacity:0.8;">আপনার ছোট কিংবা বড়— প্রতিটি অনুদান
+          সরাসরি বাংলাদেশের শিক্ষার প্রসার, স্বাস্থ্যসেবা এবং কর্মসংস্থানমূলক কার্যক্রমে ব্যয় করা হয়।</span>
+      </p>
       <div class="cta-actions animate-on-scroll">
-        <a href="donate.html" class="btn-red">❤️ Donate Now</a>
+        <a href="contact.html" class="btn-red">✉️ Contact Us</a>
         <a href="contact.html" class="btn-outline-white">Become a Volunteer →</a>
       </div>
     </div>
@@ -415,7 +540,8 @@
         <div class="footer-brand">
           <div class="logo-name">Disa Bangladesh</div>
           <div class="logo-tagline">দিশা বাংলাদেশ</div>
-          <p>A registered non-governmental organization working to empower marginalized communities across Bangladesh since 2005.</p>
+          <p>A registered non-governmental organization working to empower marginalized communities across Bangladesh
+            since 2005.</p>
           <div class="footer-social">
             <a href="#" title="Facebook">f</a>
             <a href="#" title="Twitter">𝕏</a>
@@ -431,8 +557,8 @@
             <a href="about.html">About Us</a>
             <a href="programs.html">Programs</a>
             <a href="gallery.html">Gallery</a>
-            <a href="contact.html">Contact</a>
-            <a href="donate.html">Donate</a>
+            <a href="research.html">Research</a>
+            <a href="contact.html">Contact Us</a>
           </div>
         </div>
         <div class="footer-col">
@@ -449,20 +575,21 @@
           <h5>Contact</h5>
           <div class="footer-contact-item">
             <div class="icon">📍</div>
-            <div class="info">House 42, Road 12<br>Dhanmondi, Dhaka 1209<br>Bangladesh</div>
+            <div class="info">DISA Bhaban<br>C&B Road, Barishal<br>Bangladesh</div>
           </div>
           <div class="footer-contact-item">
             <div class="icon">📞</div>
-            <div class="info">+880 2-9876543<br>+880 1711-234567</div>
+            <div class="info">+880 1724323500</div>
           </div>
           <div class="footer-contact-item">
             <div class="icon">✉️</div>
-            <div class="info">info@Disafoundation.org<br>donate@Disafoundation.org</div>
+            <div class="info">disabangladesh@yahoo.com</div>
           </div>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>© 2025 Disa Bangladesh. All rights reserved. Reg. No: BD-NGO-2005-0042</p>
+        <p>© 2026 Disa Bangladesh. All rights reserved.</p>
+        <p class="dev-credit">Developed by Nafis❤️</p>
         <div class="footer-bottom-links">
           <a href="#">Privacy Policy</a>
           <a href="#">Terms of Use</a>
@@ -491,7 +618,7 @@
     }
 
     // Click outside to close popup
-    document.addEventListener('click', function(e) {
+    document.addEventListener('click', function (e) {
       if (!document.body.classList.contains('mobile-menu-open')) return;
       const nav = document.getElementById('navLinks');
       const hamburger = document.getElementById('hamburger');
@@ -530,5 +657,26 @@
       }, 16);
     }
   </script>
+
+  <!-- Scroll to Top Button -->
+  <button class="scroll-top-btn" id="scrollTopBtn" title="Go to top">↑</button>
+
+  <script>
+    // Scroll to Top functionality
+    const scrollTopBtn = document.getElementById('scrollTopBtn');
+    if (scrollTopBtn) {
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+          scrollTopBtn.classList.add('show');
+        } else {
+          scrollTopBtn.classList.remove('show');
+        }
+      });
+      scrollTopBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
+  </script>
 </body>
+
 </html>
