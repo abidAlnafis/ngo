@@ -1,36 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Contact Disa Bangladesh — Get in touch with us to volunteer, partner, or get help." />
-  <title>Contact Us | Disa Bangladesh</title>
+  <meta name="description" content="Contact DISA Bangladesh — Get in touch with us to volunteer, partner, or get help." />
+  <title>Contact Us | DISA Bangladesh</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="icon" href="images/logo.png" type="image/png" />
 </head>
+
 <body>
 
   <!-- PAGE LOADER -->
   <div id="page-loader">
     <div class="loader-logo">
-      <img src="images/logo.png" alt="Disa Bangladesh" class="loader-logo-icon" />
+      <img src="images/logo.png" alt="DISA Bangladesh" class="loader-logo-icon" />
       <div class="loader-logo-text">
-        <div class="loader-logo-name">Disa Bangladesh</div>
+        <div class="loader-logo-name">DISA Bangladesh</div>
         <div class="loader-logo-tagline">দিশা বাংলাদেশ</div>
       </div>
     </div>
-    <div class="loader-spinner"><div class="loader-dot"></div></div>
-    <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+    <div class="loader-spinner">
+      <div class="loader-dot"></div>
+    </div>
+    <div class="loader-bar">
+      <div class="loader-bar-fill"></div>
+    </div>
     <div class="loader-text">Loading...</div>
   </div>
 
   <nav class="navbar" id="navbar">
     <div class="navbar-inner">
       <a href="index.html" class="nav-logo">
-        <img src="images/logo.png" alt="Disa Bangladesh Logo" class="logo-icon" />
-                <div class="logo-text">
-          <span class="logo-name">Disa Bangladesh <span class="beta-badge">Beta</span></span>
+        <img src="images/logo.png" alt="DISA Bangladesh Logo" class="logo-icon" />
+        <div class="logo-text">
+          <span class="logo-name">DISA Bangladesh <span class="beta-badge">Beta</span></span>
           <span class="logo-tagline">দিশা বাংলাদেশ</span>
         </div>
       </a>
@@ -40,11 +46,13 @@
         <a href="programs.html">Programs</a>
         <a href="gallery.html">Gallery</a>
         <a href="research.html">Research</a>
-        <a href="contact.html" class="nav-mobile-donate">✉️ Contact Us</a>
+        <a href="contact.html" class="active">Contact Us</a>
       </div>
       <div class="nav-actions">
-        <a href="contact.html" class="nav-donate active" style="background:var(--green-primary); border-color:var(--green-primary);">✉️ Contact Us</a>
-        <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+        <a href="contact.html" class="nav-donate">Contact Us</a>
+        <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+          <span></span><span></span><span></span>
+        </div>
       </div>
     </div>
   </nav>
@@ -79,21 +87,21 @@
               <div class="icon-box">📍</div>
               <div class="detail-content">
                 <div class="label">Head Office</div>
-                <div class="value">DISA Bhaban, C&B Road<br>Barishal, Bangladesh</div>
+                <div class="value">DISA Bhaban, C&B Road<br>Jamalpur, Bangladesh</div>
               </div>
             </div>
             <div class="contact-detail-item">
               <div class="icon-box">📞</div>
               <div class="detail-content">
                 <div class="label">Phone</div>
-                <div class="value">+880 2-9876543<br>+880 1711-234567</div>
+                <div class="value">+880 1724323500<br>+880 1711-234567</div>
               </div>
             </div>
             <div class="contact-detail-item">
               <div class="icon-box">✉️</div>
               <div class="detail-content">
                 <div class="label">Email</div>
-                <div class="value">info@Disafoundation.org<br>donate@Disafoundation.org</div>
+                <div class="value">disabangladesh@yahoo.com<br>info@Disafoundation.org</div>
               </div>
             </div>
             <div class="contact-detail-item">
@@ -120,7 +128,7 @@
         <div class="form-card animate-on-scroll">
           <span class="section-label" style="margin-bottom:20px; display:inline-flex;">Send Us a Message</span>
           <h3 style="font-size:1.5rem; font-weight:800; margin-bottom:28px; color:var(--dark);">How Can We Help?</h3>
-          <form id="contactForm" onsubmit="handleSubmit(event)">
+          <form id="contactForm">
             <div class="form-row">
               <div class="form-group">
                 <label for="firstName">First Name *</label>
@@ -168,120 +176,82 @@
       <!-- Map Placeholder -->
       <div class="map-placeholder animate-on-scroll">
         <span>📍</span>
-        <strong>Disa Bangladesh Head Office</strong>
-        <p style="font-size:0.85rem; color:var(--text-muted);">DISA Bhaban, C&B Road, Barishal, Bangladesh</p>
-        <a href="https://maps.google.com/?q=C%26B+Road+Barishal+Bangladesh" target="_blank" class="btn-outline-green" style="margin-top:8px; padding:10px 24px; font-size:0.85rem;">Open in Google Maps →</a>
+        <strong>DISA Bangladesh Head Office</strong>
+        <p style="font-size:0.85rem; color:var(--text-muted);">DISA Bhaban, C&B Road, Jamalpur, Bangladesh</p>
+        <a href="https://maps.google.com/?q=C%26B+Road+Jamalpur+Bangladesh" target="_blank" class="btn-outline-green" style="margin-top:8px; padding:10px 24px; font-size:0.85rem;">Open in Google Maps →</a>
       </div>
     </div>
   </section>
 
-  <!-- CTA -->
-  <section class="cta-section">
-    <div class="container">
-      <h2 class="animate-on-scroll">Want to Make a <span>Difference?</span></h2>
-      <p class="animate-on-scroll">Even a small donation can change a life forever. Support our programs today.</p>
-      <div class="cta-actions animate-on-scroll">
-        <a href="contact.html" class="btn-red">✉️ Contact Us</a>
-        <a href="programs.html" class="btn-outline-white">View Programs →</a>
-      </div>
-    </div>
-  </section>
-
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <div class="logo-name">Disa Bangladesh</div>
+          <div class="logo-name">DISA Bangladesh</div>
           <div class="logo-tagline">দিশা বাংলাদেশ</div>
-          <p>Empowering marginalized communities across Bangladesh since 2005.</p>
+          <p>A registered non-governmental organization working to empower marginalized communities across Bangladesh since 1997.</p>
           <div class="footer-social">
-            <a href="#">f</a><a href="#">𝕏</a><a href="#">▶</a><a href="#">📷</a><a href="#">in</a>
+            <a href="#" title="Facebook">f</a>
+            <a href="#" title="Twitter">𝕏</a>
+            <a href="#" title="YouTube">▶</a>
+            <a href="#" title="Instagram">📷</a>
+            <a href="#" title="LinkedIn">in</a>
           </div>
         </div>
         <div class="footer-col">
           <h5>Quick Links</h5>
           <div class="footer-links">
-            <a href="index.html">Home</a><a href="about.html">About Us</a>
-            <a href="programs.html">Programs</a><a href="gallery.html">Gallery</a>
-            <a href="contact.html">Contact</a><a href="contact.html">Contact Us</a>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="programs.html">Programs</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="research.html">Research</a>
+            <a href="contact.html">Contact Us</a>
           </div>
         </div>
         <div class="footer-col">
           <h5>Programs</h5>
           <div class="footer-links">
-            <a href="programs.html">Education</a><a href="programs.html">Healthcare</a>
-            <a href="programs.html">Women Empowerment</a><a href="programs.html">Environment</a>
+            <a href="programs.html">Education</a>
+            <a href="programs.html">Healthcare</a>
+            <a href="programs.html">Women Empowerment</a>
+            <a href="programs.html">Environment</a>
+            <a href="programs.html">Livelihood</a>
           </div>
         </div>
         <div class="footer-col">
           <h5>Contact</h5>
           <div class="footer-contact-item">
-            <div class="icon">📍</div><div class="info">C&B Road, Barishal</div>
+            <div class="icon">📍</div>
+            <div class="info">DISA Bhaban<br>C&B Road, Jamalpur<br>Bangladesh</div>
           </div>
           <div class="footer-contact-item">
-            <div class="icon">📞</div><div class="info">+880 2-9876543</div>
+            <div class="icon">📞</div>
+            <div class="info">+880 1724323500</div>
           </div>
           <div class="footer-contact-item">
-            <div class="icon">✉️</div><div class="info">info@Disafoundation.org</div>
+            <div class="icon">✉️</div>
+            <div class="info">disabangladesh@yahoo.com</div>
           </div>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>© 2025 Disa Bangladesh. Reg. No: BD-NGO-2005-0042</p>
-        <div class="footer-bottom-links"><a href="#">Privacy</a><a href="#">Terms</a></div>
+        <p>© 2026 DISA Bangladesh. All rights reserved.</p>
+        <p class="dev-credit">Developed by Nafis ❤️</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+          <a href="#">Annual Reports</a>
+        </div>
       </div>
     </div>
   </footer>
 
-  <script>
-    window.addEventListener('load', () => setTimeout(() => document.getElementById('page-loader').classList.add('hidden'), 400));
-    const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 60));
-    function toggleMenu() {
-      document.body.classList.toggle('mobile-menu-open');
-    }
-    document.addEventListener('click', function(e) {
-      if (!document.body.classList.contains('mobile-menu-open')) return;
-      const nav = document.getElementById('navLinks');
-      const hamburger = document.getElementById('hamburger');
-      if (!nav.contains(e.target) && !hamburger.contains(e.target)) {
-        document.body.classList.remove('mobile-menu-open');
-      }
-    });
-    document.querySelectorAll('.nav-links a').forEach(l => l.addEventListener('click', () => { document.body.classList.remove('mobile-menu-open'); }));
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((e, i) => { if (e.isIntersecting) setTimeout(() => e.target.classList.add('visible'), i * 80); });
-    }, { threshold: 0.15 });
-    document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
-    function handleSubmit(e) {
-      e.preventDefault();
-      document.getElementById('contactForm').style.display = 'none';
-      document.getElementById('successMsg').style.display = 'block';
-    }
-  </script>
-
   <!-- Scroll to Top Button -->
   <button class="scroll-top-btn" id="scrollTopBtn" title="Go to top">↑</button>
 
-  <script>
-    // Scroll to Top functionality
-    const scrollTopBtn = document.getElementById('scrollTopBtn');
-    if (scrollTopBtn) {
-      window.addEventListener('scroll', () => {
-        if (window.scrollY > 300) {
-          scrollTopBtn.classList.add('show');
-        } else {
-          scrollTopBtn.classList.remove('show');
-        }
-      });
-      scrollTopBtn.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      });
-    }
-  </script>
+  <script src="main.js" defer></script>
 </body>
+
 </html>
-
-
-
-

@@ -34,10 +34,18 @@
   --shadow-lg: 0 20px 60px rgba(0, 106, 78, 0.20);
   --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.08);
 
+  /* Glassmorphism & Premium FX */
+  --glass-bg: rgba(255, 255, 255, 0.03);
+  --glass-border: rgba(255, 255, 255, 0.12);
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  --glass-blur: blur(24px);
+  --gradient-green: linear-gradient(135deg, #00C87A 0%, #006A4E 100%);
+  --gradient-red: linear-gradient(135deg, #FF5564 0%, #C41F33 100%);
+
   --border-radius: 12px;
   --border-radius-lg: 20px;
   --border-radius-xl: 32px;
-  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* ─── Reset & Base ─── */
@@ -112,6 +120,7 @@ ul {
   font-family: var(--font-bangla);
   line-height: 1.8;
   font-size: 1.05em;
+  word-spacing: 0.12em;
 }
 
 .bg-green {
@@ -454,7 +463,9 @@ ul {
   position: relative;
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
   overflow: hidden;
   background: var(--dark);
 }
@@ -537,14 +548,31 @@ ul {
 .hero-content {
   position: relative;
   z-index: 2;
-  max-width: 1200px;
+  max-width: 1240px;
   margin: 0 auto;
-  padding: 140px 40px 80px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
+  padding: 140px 24px 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
+  gap: 48px;
   width: 100%;
+}
+
+.hero-text.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--border-radius-xl);
+  padding: 48px;
+  flex: 0 0 58%;
+  max-width: 720px;
+  box-shadow: var(--glass-shadow);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
 }
 
 .hero-badge {
@@ -554,14 +582,13 @@ ul {
   background: rgba(244, 42, 65, 0.2);
   border: 1px solid rgba(244, 42, 65, 0.4);
   color: #FF8C99;
-  padding: 8px 18px;
+  padding: 6px 16px;
   border-radius: 100px;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  margin-bottom: 24px;
-  animation: fadeInUp 0.6s ease both;
+  margin-bottom: 20px;
 }
 
 .hero-badge .dot {
@@ -573,13 +600,11 @@ ul {
 }
 
 @keyframes pulse {
-
   0%,
   100% {
     transform: scale(1);
     opacity: 1;
   }
-
   50% {
     transform: scale(1.4);
     opacity: 0.7;
@@ -587,34 +612,37 @@ ul {
 }
 
 .hero-title {
-  font-size: clamp(2.6rem, 5vw, 4rem);
+  font-size: clamp(2.4rem, 6vw, 4.2rem);
   font-weight: 900;
   color: var(--white);
   line-height: 1.1;
   margin-bottom: 24px;
-  animation: fadeInUp 0.7s 0.1s ease both;
+  letter-spacing: -1.5px;
+  word-spacing: 0.1em;
 }
 
 .hero-title .highlight {
-  background: linear-gradient(135deg, #00C87A, #00E68A);
+  background: linear-gradient(135deg, #00E68A, #00C87A, #00875F);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  text-shadow: 0 0 40px rgba(0, 200, 122, 0.3);
 }
 
 .hero-title .highlight-red {
-  background: linear-gradient(135deg, #FF5564, #FF8C99);
+  background: linear-gradient(135deg, #FF8C99, #FF5564, #C41F33);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  filter: drop-shadow(0 0 20px rgba(244, 42, 65, 0.3));
 }
 
 .hero-desc {
-  font-size: 1.1rem;
-  color: rgba(255, 255, 255, 0.75);
-  line-height: 1.8;
-  margin-bottom: 36px;
-  animation: fadeInUp 0.7s 0.2s ease both;
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.7;
+  margin-bottom: 40px;
+  max-width: 700px;
 }
 
 .hero-actions {
@@ -622,49 +650,98 @@ ul {
   gap: 16px;
   align-items: center;
   flex-wrap: wrap;
-  animation: fadeInUp 0.7s 0.3s ease both;
+  justify-content: flex-start;
 }
 
-.hero-stats-grid {
+.btn-glow {
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 106, 78, 0.5);
+  border: none;
+}
+.btn-glow::after {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%;
+  width: 50%; height: 100%;
+  background: linear-gradient(to right, transparent, rgba(255,255,255,0.4), transparent);
+  transform: skewX(-20deg);
+  animation: shine 4s infinite cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes shine {
+  0% { left: -100%; }
+  20%, 100% { left: 200%; }
+}
+
+.hero-glass-stats-wrapper {
+  flex: 0 0 38%;
+  position: relative;
+  z-index: 10;
+  width: 100%;
+}
+
+.hero-glass-stats {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  animation: fadeInRight 0.8s 0.3s ease both;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
 }
 
-.hero-stat-card {
-  background: rgba(255, 255, 255, 0.07);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+.glass-stat-card {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
   border-radius: var(--border-radius-lg);
-  padding: 28px 24px;
+  padding: 24px 20px;
   text-align: center;
-  backdrop-filter: blur(12px);
-  transition: var(--transition);
+  box-shadow: var(--glass-shadow);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+  position: relative;
+  overflow: hidden;
 }
 
-.hero-stat-card:hover {
-  background: rgba(255, 255, 255, 0.12);
-  transform: translateY(-4px);
+.glass-stat-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 4px;
+  background: var(--gradient-green);
+  opacity: 0;
+  transition: opacity 0.3s;
 }
 
-.hero-stat-card .stat-num {
+.glass-stat-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+.glass-stat-card:hover::before {
+  opacity: 1;
+}
+
+.glass-stat-card .stat-icon {
   font-size: 2.4rem;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.glass-stat-card .stat-num {
+  font-size: 2.8rem;
   font-weight: 900;
   color: var(--white);
   line-height: 1;
   margin-bottom: 8px;
 }
 
-.hero-stat-card .stat-num span {
+.glass-stat-card .stat-num span {
   color: #00C87A;
 }
 
-.hero-stat-card .stat-label {
-  font-size: 0.82rem;
-  color: rgba(255, 255, 255, 0.6);
+.glass-stat-card .stat-label {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
   text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: 500;
+  letter-spacing: 1.5px;
+  font-weight: 600;
 }
 
 .hero-scroll-indicator {
@@ -712,52 +789,9 @@ ul {
   }
 }
 
-/* ─── Stats Section ─── */
+/* ─── Stats Section (Hidden since we moved to glass stats, but keeping structure if used elsewhere) ─── */
 .stats-section {
-  background: var(--green-primary);
-  padding: 70px 0;
-  position: relative;
-  overflow: hidden;
-}
-
-.stats-section::before {
-  content: '';
-  position: absolute;
-  top: -60px;
-  right: -60px;
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.05);
-}
-
-.stats-section::after {
-  content: '';
-  position: absolute;
-  bottom: -80px;
-  left: -80px;
-  width: 400px;
-  height: 400px;
-  border-radius: 50%;
-  background: rgba(244, 42, 65, 0.08);
-}
-
-.stats-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 0;
-}
-
-.stat-item {
-  text-align: center;
-  padding: 30px 20px;
-  border-right: 1px solid rgba(255, 255, 255, 0.15);
-  position: relative;
-  z-index: 1;
-}
-
-.stat-item:last-child {
-  border-right: none;
+  display: none;
 }
 
 /* ─── Disa Program Cards ─── */
@@ -869,8 +903,6 @@ a.disa-card:hover {
 .prog-detail-reverse>* {
   direction: ltr;
 }
-
-.prog-detail-text {}
 
 .prog-detail-img {
   border-radius: 20px;
@@ -1150,36 +1182,36 @@ a.disa-card:hover {
 }
 
 .value-card {
-  background: var(--white);
-  border: 1px solid var(--gray-2);
-  border-radius: var(--border-radius);
-  padding: 28px;
+  border: none;
+  border-radius: 16px;
+  padding: 32px;
   transition: var(--transition);
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
-.value-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, var(--green-primary), var(--green-light));
-  transform: scaleX(0);
-  transition: var(--transition);
-  transform-origin: left;
+/* MISSION CARD */
+.card-mission {
+  background: var(--green-primary);
+  color: var(--white);
+  box-shadow: 0 10px 30px rgba(0, 106, 78, 0.2);
 }
 
-.value-card:hover::before {
-  transform: scaleX(1);
+/* VISION CARD */
+.card-vision {
+  background: var(--red-primary);
+  color: var(--white);
+  box-shadow: 0 10px 30px rgba(244, 42, 65, 0.2);
 }
 
-.value-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-md);
-  border-color: var(--green-pale);
+/* PHILOSOPHY CARD */
+.card-philosophy {
+  background: var(--dark-2);
+  color: var(--white);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
 .value-icon {
@@ -2407,13 +2439,6 @@ a.disa-card:hover {
   -webkit-backdrop-filter: blur(12px);
 }
 
-/* Value cards — glass on hover */
-.value-card:hover {
-  background: rgba(255, 255, 255, 0.85) !important;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  box-shadow: 0 12px 40px rgba(0, 106, 78, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.9);
-}
 
 /* Testimonial cards — glass on hover */
 .testimonial-card {
@@ -2503,9 +2528,17 @@ a.disa-card:hover {
 
 @media (max-width: 968px) {
   .hero-content {
-    grid-template-columns: 1fr;
+    flex-direction: column;
+    padding: 120px 24px 60px;
     gap: 40px;
-    padding: 120px 20px 70px;
+    text-align: center;
+  }
+
+  .hero-text.glass-panel {
+    flex: none;
+    width: 100%;
+    padding: 40px 24px;
+    align-items: center;
     text-align: center;
   }
 
@@ -2513,12 +2546,13 @@ a.disa-card:hover {
     justify-content: center;
   }
 
-  .hero-badge {
-    margin-left: auto;
-    margin-right: auto;
+  .hero-glass-stats-wrapper {
+    flex: none;
+    margin: 0;
+    padding: 0;
   }
 
-  .hero-stats-grid {
+  .hero-glass-stats {
     grid-template-columns: repeat(2, 1fr);
     gap: 14px;
   }
@@ -2783,17 +2817,22 @@ a.disa-card:hover {
     justify-content: center;
   }
 
-  .hero-stats-grid {
+  .hero-glass-stats-wrapper {
+    margin: -20px auto 0;
+    padding: 0 16px;
+  }
+
+  .hero-glass-stats {
     grid-template-columns: 1fr 1fr;
     gap: 12px;
   }
 
-  .hero-stat-card {
-    padding: 18px 14px;
+  .glass-stat-card {
+    padding: 24px 16px;
   }
 
-  .hero-stat-card .stat-num {
-    font-size: 1.8rem;
+  .glass-stat-card .stat-num {
+    font-size: 2rem;
   }
 
   /* Sections */
@@ -3008,9 +3047,6 @@ a.disa-card:hover {
     transform: none;
   }
 
-  .value-card:hover {
-    transform: none;
-  }
 
   .testimonial-card:hover {
     transform: none;
