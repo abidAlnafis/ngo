@@ -203,31 +203,70 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // E. Share Content Function
+    // E. Share Content Function & Custom Modal
+    function createShareModal() {
+        if (document.getElementById('customShareModal')) return;
+    
+        const modalHTML = `
+        <div id="customShareModal" class="share-modal-overlay">
+            <div class="share-modal-content">
+                <button class="share-modal-close" onclick="closeShareModal()">✕</button>
+                <h3 class="share-modal-title">Share Article</h3>
+                <div class="share-modal-preview">
+                    <strong id="shareModalTitleText"></strong>
+                </div>
+                <div class="share-social-links">
+                    <a href="#" id="shareFb" target="_blank" class="social-btn fb" title="Facebook">f</a>
+                    <a href="#" id="shareTw" target="_blank" class="social-btn tw" title="X (Twitter)">𝕏</a>
+                    <a href="#" id="shareWa" target="_blank" class="social-btn wa" title="WhatsApp">💬</a>
+                    <a href="#" id="shareIn" target="_blank" class="social-btn in" title="LinkedIn">in</a>
+                </div>
+                <div class="share-copy-box">
+                    <input type="text" id="shareUrlInput" readonly>
+                    <button onclick="copyShareUrl()" id="copyShareBtn">Copy</button>
+                </div>
+            </div>
+        </div>
+        `;
+        document.body.insertAdjacentHTML('beforeend', modalHTML);
+        
+        document.getElementById('customShareModal').addEventListener('click', function(e) {
+            if(e.target === this) closeShareModal();
+        });
+    }
+    
+    window.closeShareModal = function() {
+        const modal = document.getElementById('customShareModal');
+        if (modal) modal.classList.remove('active');
+    };
+    
+    window.copyShareUrl = function() {
+        const input = document.getElementById('shareUrlInput');
+        input.select();
+        input.setSelectionRange(0, 99999);
+        navigator.clipboard.writeText(input.value).then(() => {
+            const btn = document.getElementById('copyShareBtn');
+            btn.textContent = 'Copied!';
+            setTimeout(() => btn.textContent = 'Copy', 2000);
+        });
+    };
+
     window.shareContent = function(title, id) {
         const url = window.location.href.split('#')[0] + (id ? '#' + id : '');
         
-        const fallbackCopy = () => {
-            navigator.clipboard.writeText(url).then(() => {
-                alert("Link copied to clipboard!");
-            }).catch(console.error);
-        };
-
-        // Windows native share can be buggy on local files (file://) 
-        if (window.location.protocol === 'file:' || !navigator.share) {
-            fallbackCopy();
-            return;
-        }
-
-        navigator.share({
-            title: title,
-            url: url
-        }).catch((error) => {
-            console.log('Error sharing:', error);
-            // If user didn't intentionally cancel the share, fall back to copy
-            if (error.name !== 'AbortError') {
-                fallbackCopy();
-            }
-        });
+        createShareModal();
+        
+        document.getElementById('shareModalTitleText').textContent = title;
+        document.getElementById('shareUrlInput').value = url;
+        
+        const encodedUrl = encodeURIComponent(url);
+        const encodedTitle = encodeURIComponent(title);
+        
+        document.getElementById('shareFb').href = `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`;
+        document.getElementById('shareTw').href = `https://twitter.com/intent/tweet?url=${encodedUrl}&text=${encodedTitle}`;
+        document.getElementById('shareWa').href = `https://api.whatsapp.com/send?text=${encodedTitle} ${encodedUrl}`;
+        document.getElementById('shareIn').href = `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`;
+        
+        document.getElementById('customShareModal').classList.add('active');
     };
 });
