@@ -202,4 +202,19 @@ document.addEventListener('DOMContentLoaded', () => {
             success.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
     };
+
+    // E. Share Content Function
+    window.shareContent = function(title, id) {
+        const url = window.location.href.split('#')[0] + (id ? '#' + id : '');
+        if (navigator.share) {
+            navigator.share({
+                title: title,
+                url: url
+            }).catch(console.error);
+        } else {
+            navigator.clipboard.writeText(url).then(() => {
+                alert("Link copied to clipboard!");
+            }).catch(console.error);
+        }
+    };
 });

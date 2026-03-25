@@ -59,6 +59,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 100px; /* Accounts for sticky header */
 }
 
 body {
@@ -1580,23 +1581,22 @@ a.disa-card:hover {
 
 .footer-contact-item {
   display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  margin-bottom: 14px;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 16px;
 }
 
 .footer-contact-item .icon {
-  width: 32px;
-  height: 32px;
+  width: 36px;
+  height: 36px;
   background: rgba(0, 106, 78, 0.2);
   border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.85rem;
+  font-size: 1rem;
   color: #00C87A;
   flex-shrink: 0;
-  margin-top: 2px;
 }
 
 .footer-contact-item .info {
@@ -3105,15 +3105,17 @@ a.disa-card:hover {
 /* ─── Scroll-to-Top Button ─── */
 .scroll-top-btn {
   position: fixed;
-  bottom: 24px;
-  right: 24px;
-  width: 50px;
-  height: 50px;
-  background-color: var(--green-primary);
+  bottom: 30px;
+  right: 30px;
+  width: 55px;
+  height: 55px;
+  background: rgba(0, 106, 78, 0.65); /* var(--green-primary) with opacity */
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   color: var(--white);
-  border: none;
-  border-radius: 10px;
-  box-shadow: 0 4px 16px rgba(0, 106, 78, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  box-shadow: 0 8px 32px rgba(0, 106, 78, 0.25), inset 0 0 0 1px rgba(255, 255, 255, 0.1);
   font-size: 1.5rem;
   display: flex;
   align-items: center;
@@ -3122,28 +3124,61 @@ a.disa-card:hover {
   z-index: 999;
   opacity: 0;
   visibility: hidden;
-  transform: translateY(20px);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateY(20px) scale(0.9);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .scroll-top-btn.show {
   opacity: 1;
   visibility: visible;
-  transform: translateY(0);
+  transform: translateY(0) scale(1);
 }
 
 .scroll-top-btn:hover {
-  background-color: var(--red-primary);
-  transform: translateY(-5px);
-  box-shadow: 0 8px 24px rgba(244, 42, 65, 0.3);
+  background: rgba(244, 42, 65, 0.85); /* var(--red-primary) with opacity */
+  transform: translateY(-5px) scale(1.08);
+  box-shadow: 0 12px 40px rgba(244, 42, 65, 0.4), inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.4);
 }
 
 @media (max-width: 768px) {
   .scroll-top-btn {
     bottom: 20px;
     right: 20px;
-    width: 44px;
-    height: 44px;
+    width: 48px;
+    height: 48px;
     font-size: 1.3rem;
   }
+}
+
+/* ─── Share Button ─── */
+.share-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(0, 106, 78, 0.2);
+  color: var(--green-primary);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.share-btn:hover {
+  background: var(--green-primary);
+  color: var(--white);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 106, 78, 0.25);
+  border-color: transparent;
+}
+
+.share-btn svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
 }
