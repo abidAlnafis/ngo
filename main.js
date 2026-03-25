@@ -206,15 +206,28 @@ document.addEventListener('DOMContentLoaded', () => {
     // E. Share Content Function
     window.shareContent = function(title, id) {
         const url = window.location.href.split('#')[0] + (id ? '#' + id : '');
-        if (navigator.share) {
-            navigator.share({
-                title: title,
-                url: url
-            }).catch(console.error);
-        } else {
+        
+        const fallbackCopy = () => {
             navigator.clipboard.writeText(url).then(() => {
                 alert("Link copied to clipboard!");
             }).catch(console.error);
+        };
+
+        // Windows native share can be buggy on local files (file://) 
+        if (window.location.protocol === 'file:' || !navigator.share) {
+            fallbackCopy();
+            return;
         }
+
+        navigator.share({
+            title: title,
+            url: url
+        }).catch((error) => {
+            console.log('Error sharing:', error);
+            // If user didn't intentionally cancel the share, fall back to copy
+            if (error.name !== 'AbortError') {
+                fallbackCopy();
+            }
+        });
     };
 });
